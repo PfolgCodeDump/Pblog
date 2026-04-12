@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo 2 - 图片画廊</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>图片画廊</h1>
+        <div class="gallery">
+            <span>
+                <img src="assets/akirevarga-spring-10194616.jpg" alt="图片 1" onclick="showImage(this.src)">
+                </br> Image by <a
+                    href="https://pixabay.com/users/akirevarga-8968314/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=10194616">Erika
+                    Varga</a> from <a
+                    href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=10194616">Pixabay</a>
+            </span>
+            <span>
+                <img src="assets/heckimg-tree-7619791.jpg" alt="图片 2" onclick="showImage(this.src)">
+                </br>
+                Image by <a
+                    href="https://pixabay.com/users/heckimg-24974271/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7619791">Michael
+                    Heck</a> from <a
+                    href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7619791">Pixabay</a>
+            </span>
+            <span>
+                <img src="assets/himmelstraeume-bachalpsee-7572681.jpg" alt="图片 3" onclick="showImage(this.src)">
+                </br>
+                Image by <a
+                    href="https://pixabay.com/users/himmelstraeume-28503001/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7572681">Singha
+                    Bohrer (-Bender)</a> from <a
+                    href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7572681">Pixabay</a>
+            </span>
+            <span>
+                <img src="assets/kanenori-beach-6292382.jpg" alt="图片 4" onclick="showImage(this.src)"></br>
+                Image by <a
+                    href="https://pixabay.com/users/kanenori-4749850/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6292382">Kanenori</a>
+                from <a
+                    href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6292382">Pixabay</a>
+            </span>
+        </div>
+    </div>
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content">
+    </div>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
