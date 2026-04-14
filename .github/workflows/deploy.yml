@@ -1,7 +1,8 @@
 name: Deploy to GitHub Pages
 on:
-  push:
-    branches: [main]
+  # push:
+  #   branches: [main]
+  workflow_dispatch:   # 手动触发
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -9,13 +10,25 @@ jobs:
       contents: write  
     steps:
       - uses: actions/checkout@v4
+
+      - name: Clean npm cache and node_modules
+        run: |
+          npm cache clean --force
+          rm -rf node_modules
+
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
+
       - run: npm ci
+
+      - name: Clean output directory
+        run: rm -rf output
+
       - run: npm run build
         env:
           NEXT_PUBLIC_SITE_URL: https://${{ github.repository_owner }}.github.io
+
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
