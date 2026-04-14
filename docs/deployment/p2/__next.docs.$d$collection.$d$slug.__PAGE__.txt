@@ -1,0 +1,185 @@
+1:"$Sreact.fragment"
+2:I[22016,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js","/_next/static/chunks/07.yc-n-0xwpq.js"],""]
+9:I[28245,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js","/_next/static/chunks/07.yc-n-0xwpq.js"],"default"]
+a:I[55132,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js","/_next/static/chunks/07.yc-n-0xwpq.js"],"default"]
+c:I[97367,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js"],"OutletBoundary"]
+d:"$Sreact.suspense"
+3:Tca6,<h2 id="第二部分项目配置">第二部分：项目配置</h2>
+<h3 id="21-环境变量文件">2.1 环境变量文件</h3>
+<p>复制示例配置文件：</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Windows</span>
+copy .env.example .env.local
+
+<span class="hljs-comment"># macOS/Linux</span>
+<span class="hljs-built_in">cp</span> .env.example .env.local
+</code></pre>
+<h3 id="22-基础配置必需">2.2 基础配置（必需）</h3>
+<pre><code class="hljs language-env"># 网站 URL（部署后修改为实际域名
+NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+
+# 网站名称
+NEXT_PUBLIC_SITE_NAME=Pblog
+
+# 网站描述
+NEXT_PUBLIC_SITE_DESCRIPTION=个人博客
+
+# 作者名称
+NEXT_PUBLIC_AUTHOR_NAME=Your Name
+</code></pre>
+<p><strong>注意</strong>：所有 <code>NEXT_PUBLIC_</code> 前缀的变量可在客户端代码中访问，请勿存储敏感信息。</p>
+<h3 id="23-giscus-评论系统可选">2.3 Giscus 评论系统（可选）</h3>
+<h4 id="前置条件">前置条件</h4>
+<ol>
+<li>GitHub 仓库已启用 Discussions</li>
+<li>安装 <a href="https://github.com/apps/giscus">Giscus App</a> 到仓库</li>
+</ol>
+<h4 id="配置步骤">配置步骤</h4>
+<ol>
+<li>访问 <a href="https://giscus.app/">giscus.app</a></li>
+<li>按页面提示获取配置信息</li>
+<li>填入环境变量：</li>
+</ol>
+<pre><code class="hljs language-env">NEXT_PUBLIC_GISCUS_REPO=username/repo
+NEXT_PUBLIC_GISCUS_REPO_ID=your-repo-id
+NEXT_PUBLIC_GISCUS_CATEGORY=Announcements
+NEXT_PUBLIC_GISCUS_CATEGORY_ID=your-category-id
+</code></pre>
+<p><strong>禁用方式</strong>：留空上述变量即可禁用评论系统。</p>
+<h3 id="24-live2d-看板娘可选">2.4 Live2D 看板娘（可选）</h3>
+<pre><code class="hljs language-env"># 模型路径数组，设为 [] 禁用
+NEXT_PUBLIC_LIVE2D_MODELS=["/live2d/model/model.json"]
+
+# 停靠位置：left 或 right
+NEXT_PUBLIC_LIVE2D_DOCKED_POSITION=right
+
+# 模型位置 [x, y]
+NEXT_PUBLIC_LIVE2D_POSITION=[0, 60]
+
+# 缩放比例
+NEXT_PUBLIC_LIVE2D_SCALE=0.08
+
+# 舞台高度
+NEXT_PUBLIC_LIVE2D_STAGE_HEIGHT=450
+</code></pre>
+<p><strong>禁用方式</strong>：设置 <code>NEXT_PUBLIC_LIVE2D_MODELS=[]</code></p>
+<h3 id="25-粒子特效可选">2.5 粒子特效（可选）</h3>
+<pre><code class="hljs language-env"># 是否启用
+NEXT_PUBLIC_PARTICLES_ENABLED=true
+
+# 类型：petal, leaf, rain, snow, auto
+NEXT_PUBLIC_PARTICLES_TYPE=petal
+
+# 粒子数量
+NEXT_PUBLIC_PARTICLES_COUNT=50
+
+# z-index 层级
+NEXT_PUBLIC_PARTICLES_ZINDEX=0
+</code></pre>
+<p><strong>禁用方式</strong>：设置 <code>NEXT_PUBLIC_PARTICLES_ENABLED=false</code></p>
+<h3 id="26-其他配置">2.6 其他配置</h3>
+<pre><code class="hljs language-env"># 默认主题色
+NEXT_PUBLIC_DEFAULT_PRIMARY_COLOR=#ff69b4
+
+# 导航栏自动隐藏
+NEXT_PUBLIC_HEADER_AUTO_HIDE_ENABLED=true
+</code></pre>
+<h3 id="27-内容页面配置">2.7 内容页面配置</h3>
+<p>编辑以下 Markdown 文件自定义内容页面：</p>
+<ul>
+<li><code>content/spec/about/index.md</code> - 关于页面</li>
+<li><code>content/spec/journey/index.md</code> - 历程页面</li>
+<li><code>content/spec/projects/index.md</code> - 项目页面</li>
+<li><code>content/spec/information/index.md</code> - 信息页面</li>
+</ul>0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"w-full","children":["$","div",null,{"className":"flex flex-col lg:flex-row","children":[["$","div",null,{"className":"lg:w-72 flex-shrink-0 hidden lg:block","children":["$","div",null,{"className":"sticky top-4 pl-4","children":["$","div",null,{"className":"card","children":[["$","$L2",null,{"href":"/docs/deployment","className":"flex items-center gap-2 mb-4 hover:opacity-80 transition-opacity","style":{"color":"var(--primary)"},"children":[["$","span",null,{"className":"text-2xl","children":"🚀"}],["$","span",null,{"className":"font-bold","children":"Pblog 部署教程"}]]}],["$","div",null,{"className":"space-y-1 max-h-[calc(100vh-12rem)] overflow-y-auto","children":[["$","$L2","p1",{"href":"/docs/deployment/p1","className":"block px-3 py-2 rounded-md text-sm transition-all hover:bg-primary/5","style":{"color":"var(--text)"},"children":[["$","span",null,{"className":"mr-2 opacity-60","children":[1,"."]}],["$","span",null,{"className":"truncate","children":"第一部分：环境准备"}]]}],["$","$L2","p2",{"href":"/docs/deployment/p2","className":"block px-3 py-2 rounded-md text-sm transition-all bg-primary/10 text-primary font-medium","style":{"color":"var(--primary)"},"children":[["$","span",null,{"className":"mr-2 opacity-60","children":[2,"."]}],["$","span",null,{"className":"truncate","children":"第二部分：项目配置"}]]}],["$","$L2","p3",{"href":"/docs/deployment/p3","className":"block px-3 py-2 rounded-md text-sm transition-all hover:bg-primary/5","style":{"color":"var(--text)"},"children":[["$","span",null,{"className":"mr-2 opacity-60","children":[3,"."]}],["$","span",null,{"className":"truncate","children":"第三部分：本地开发"}]]}],["$","$L2","p4",{"href":"/docs/deployment/p4","className":"block px-3 py-2 rounded-md text-sm transition-all hover:bg-primary/5","style":{"color":"var(--text)"},"children":[["$","span",null,{"className":"mr-2 opacity-60","children":[4,"."]}],["$","span",null,{"className":"truncate","children":"第四部分：构建与部署"}]]}],["$","$L2","p5",{"href":"/docs/deployment/p5","className":"block px-3 py-2 rounded-md text-sm transition-all hover:bg-primary/5","style":{"color":"var(--text)"},"children":[["$","span",null,{"className":"mr-2 opacity-60","children":[5,"."]}],["$","span",null,{"className":"truncate","children":"第五部分：自定义与扩展"}]]}],["$","$L2","p6",{"href":"/docs/deployment/p6","className":"block px-3 py-2 rounded-md text-sm transition-all hover:bg-primary/5","style":{"color":"var(--text)"},"children":[["$","span",null,{"className":"mr-2 opacity-60","children":[6,"."]}],["$","span",null,{"className":"truncate","children":"第六部分：常见问题"}]]}],["$","$L2","summary",{"href":"/docs/deployment/summary","className":"block px-3 py-2 rounded-md text-sm transition-all hover:bg-primary/5","style":{"color":"var(--text)"},"children":[["$","span",null,{"className":"mr-2 opacity-60","children":[7,"."]}],["$","span",null,{"className":"truncate","children":"总结"}]]}]]}]]}]}]}],["$","div",null,{"className":"flex-1 min-w-0 px-4 lg:px-8","children":[["$","$L2",null,{"href":"/docs/deployment","className":"inline-flex items-center gap-2 mb-6 hover:opacity-80 transition-opacity lg:hidden","style":{"color":"var(--primary)"},"children":[["$","span",null,{"children":"←"}],["$","span",null,{"children":["返回 ","Pblog 部署教程"]}]]}],["$","h1",null,{"className":"text-4xl font-bold mb-4","style":{"color":"var(--primary)"},"children":"第二部分：项目配置"}],["$","p",null,{"className":"text-xl mb-8","style":{"color":"var(--text)","opacity":0.8},"children":"环境变量与功能配置"}],["$","div",null,{"className":"prose max-w-none mb-12 post-content","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4","$L5"]}],"$L6"]}]}],["$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"nWl4-WfeNA9LF-gjJi2_V"}
+4:["$","div",null,{"className":"grid grid-cols-2 gap-6 mb-12","children":[["$","div",null,{"className":"text-left","children":["$","$L2",null,{"href":"/docs/deployment/p1","className":"block p-4 rounded-lg card hover:translate-x-1 transition-all","children":[["$","div",null,{"className":"text-sm mb-1","style":{"color":"var(--text)","opacity":0.6},"children":"上一篇"}],["$","div",null,{"className":"font-semibold","style":{"color":"var(--primary)"},"children":"第一部分：环境准备"}]]}]}],["$","div",null,{"className":"text-right","children":["$","$L2",null,{"href":"/docs/deployment/p3","className":"block p-4 rounded-lg card hover:-translate-x-1 transition-all","children":[["$","div",null,{"className":"text-sm mb-1","style":{"color":"var(--text)","opacity":0.6},"children":"下一篇"}],["$","div",null,{"className":"font-semibold","style":{"color":"var(--primary)"},"children":"第三部分：本地开发"}]]}]}]]}]
+5:["$","$L9",null,{}]
+b:Tca6,<h2 id="第二部分项目配置">第二部分：项目配置</h2>
+<h3 id="21-环境变量文件">2.1 环境变量文件</h3>
+<p>复制示例配置文件：</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Windows</span>
+copy .env.example .env.local
+
+<span class="hljs-comment"># macOS/Linux</span>
+<span class="hljs-built_in">cp</span> .env.example .env.local
+</code></pre>
+<h3 id="22-基础配置必需">2.2 基础配置（必需）</h3>
+<pre><code class="hljs language-env"># 网站 URL（部署后修改为实际域名
+NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+
+# 网站名称
+NEXT_PUBLIC_SITE_NAME=Pblog
+
+# 网站描述
+NEXT_PUBLIC_SITE_DESCRIPTION=个人博客
+
+# 作者名称
+NEXT_PUBLIC_AUTHOR_NAME=Your Name
+</code></pre>
+<p><strong>注意</strong>：所有 <code>NEXT_PUBLIC_</code> 前缀的变量可在客户端代码中访问，请勿存储敏感信息。</p>
+<h3 id="23-giscus-评论系统可选">2.3 Giscus 评论系统（可选）</h3>
+<h4 id="前置条件">前置条件</h4>
+<ol>
+<li>GitHub 仓库已启用 Discussions</li>
+<li>安装 <a href="https://github.com/apps/giscus">Giscus App</a> 到仓库</li>
+</ol>
+<h4 id="配置步骤">配置步骤</h4>
+<ol>
+<li>访问 <a href="https://giscus.app/">giscus.app</a></li>
+<li>按页面提示获取配置信息</li>
+<li>填入环境变量：</li>
+</ol>
+<pre><code class="hljs language-env">NEXT_PUBLIC_GISCUS_REPO=username/repo
+NEXT_PUBLIC_GISCUS_REPO_ID=your-repo-id
+NEXT_PUBLIC_GISCUS_CATEGORY=Announcements
+NEXT_PUBLIC_GISCUS_CATEGORY_ID=your-category-id
+</code></pre>
+<p><strong>禁用方式</strong>：留空上述变量即可禁用评论系统。</p>
+<h3 id="24-live2d-看板娘可选">2.4 Live2D 看板娘（可选）</h3>
+<pre><code class="hljs language-env"># 模型路径数组，设为 [] 禁用
+NEXT_PUBLIC_LIVE2D_MODELS=["/live2d/model/model.json"]
+
+# 停靠位置：left 或 right
+NEXT_PUBLIC_LIVE2D_DOCKED_POSITION=right
+
+# 模型位置 [x, y]
+NEXT_PUBLIC_LIVE2D_POSITION=[0, 60]
+
+# 缩放比例
+NEXT_PUBLIC_LIVE2D_SCALE=0.08
+
+# 舞台高度
+NEXT_PUBLIC_LIVE2D_STAGE_HEIGHT=450
+</code></pre>
+<p><strong>禁用方式</strong>：设置 <code>NEXT_PUBLIC_LIVE2D_MODELS=[]</code></p>
+<h3 id="25-粒子特效可选">2.5 粒子特效（可选）</h3>
+<pre><code class="hljs language-env"># 是否启用
+NEXT_PUBLIC_PARTICLES_ENABLED=true
+
+# 类型：petal, leaf, rain, snow, auto
+NEXT_PUBLIC_PARTICLES_TYPE=petal
+
+# 粒子数量
+NEXT_PUBLIC_PARTICLES_COUNT=50
+
+# z-index 层级
+NEXT_PUBLIC_PARTICLES_ZINDEX=0
+</code></pre>
+<p><strong>禁用方式</strong>：设置 <code>NEXT_PUBLIC_PARTICLES_ENABLED=false</code></p>
+<h3 id="26-其他配置">2.6 其他配置</h3>
+<pre><code class="hljs language-env"># 默认主题色
+NEXT_PUBLIC_DEFAULT_PRIMARY_COLOR=#ff69b4
+
+# 导航栏自动隐藏
+NEXT_PUBLIC_HEADER_AUTO_HIDE_ENABLED=true
+</code></pre>
+<h3 id="27-内容页面配置">2.7 内容页面配置</h3>
+<p>编辑以下 Markdown 文件自定义内容页面：</p>
+<ul>
+<li><code>content/spec/about/index.md</code> - 关于页面</li>
+<li><code>content/spec/journey/index.md</code> - 历程页面</li>
+<li><code>content/spec/projects/index.md</code> - 项目页面</li>
+<li><code>content/spec/information/index.md</code> - 信息页面</li>
+</ul>6:["$","div",null,{"className":"lg:w-72 flex-shrink-0 hidden xl:block","children":["$","div",null,{"className":"sticky top-4 pr-4","children":["$","div",null,{"className":"card","children":[["$","h3",null,{"className":"text-lg font-semibold mb-4","children":"目录"}],["$","div",null,{"className":"max-h-[calc(100vh-8rem)] overflow-y-auto","children":["$","$La",null,{"content":"$b"}]}]]}]}]}]
+7:["$","script","script-0",{"src":"/_next/static/chunks/07.yc-n-0xwpq.js","async":true}]
+8:["$","$Lc",null,{"children":["$","$d",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]
+e:null

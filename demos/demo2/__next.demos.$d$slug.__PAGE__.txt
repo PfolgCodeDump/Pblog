@@ -1,0 +1,60 @@
+1:"$Sreact.fragment"
+2:I[22016,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js"],""]
+5:I[97367,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js"],"OutletBoundary"]
+6:"$Sreact.suspense"
+3:Tae5,<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo 2 - 图片画廊</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>图片画廊</h1>
+        <div class="gallery">
+            <span>
+                <img src="assets/akirevarga-spring-10194616.jpg" alt="图片 1" onclick="showImage(this.src)">
+                </br> Image by <a
+                    href="https://pixabay.com/users/akirevarga-8968314/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=10194616">Erika
+                    Varga</a> from <a
+                    href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=10194616">Pixabay</a>
+            </span>
+            <span>
+                <img src="assets/heckimg-tree-7619791.jpg" alt="图片 2" onclick="showImage(this.src)">
+                </br>
+                Image by <a
+                    href="https://pixabay.com/users/heckimg-24974271/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7619791">Michael
+                    Heck</a> from <a
+                    href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7619791">Pixabay</a>
+            </span>
+            <span>
+                <img src="assets/himmelstraeume-bachalpsee-7572681.jpg" alt="图片 3" onclick="showImage(this.src)">
+                </br>
+                Image by <a
+                    href="https://pixabay.com/users/himmelstraeume-28503001/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7572681">Singha
+                    Bohrer (-Bender)</a> from <a
+                    href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7572681">Pixabay</a>
+            </span>
+            <span>
+                <img src="assets/kanenori-beach-6292382.jpg" alt="图片 4" onclick="showImage(this.src)"></br>
+                Image by <a
+                    href="https://pixabay.com/users/kanenori-4749850/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6292382">Kanenori</a>
+                from <a
+                    href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6292382">Pixabay</a>
+            </span>
+        </div>
+    </div>
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content">
+    </div>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"max-w-6xl mx-auto","children":[["$","div",null,{"className":"mb-6","children":["$","$L2",null,{"href":"/demos","className":"text-primary hover:underline flex items-center gap-2","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","className":"h-4 w-4","fill":"none","viewBox":"0 0 24 24","stroke":"currentColor","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M15 19l-7-7 7-7"}]}],"返回 demo 列表"]}]}],["$","div",null,{"className":"mb-6","children":[["$","h1",null,{"className":"text-3xl font-bold mb-4 text-primary","children":"图片画廊"}],["$","p",null,{"className":"text-gray-600 mb-4","children":"一个带有灯箱效果的图片画廊组件"}],["$","div",null,{"className":"flex flex-wrap gap-2 mb-4","children":[["$","span","JavaScript",{"className":"px-3 py-1 bg-primary/10 text-primary text-sm rounded-full","children":"JavaScript"}],["$","span","HTML",{"className":"px-3 py-1 bg-primary/10 text-primary text-sm rounded-full","children":"HTML"}],["$","span","CSS",{"className":"px-3 py-1 bg-primary/10 text-primary text-sm rounded-full","children":"CSS"}]]}],["$","a",null,{"href":"/demos/demo2/demo.html","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg hover:opacity-90 transition-opacity","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","className":"h-4 w-4","fill":"none","viewBox":"0 0 24 24","stroke":"currentColor","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"}]}],"打开完整页面"]}]]}],["$","div",null,{"className":"card overflow-hidden","children":["$","iframe",null,{"srcDoc":"$3","title":"图片画廊","className":"w-full border-0","style":{"minHeight":"600px"},"sandbox":"allow-scripts allow-same-origin allow-forms"}]}]]}],null,"$L4"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"nWl4-WfeNA9LF-gjJi2_V"}
+4:["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]
+7:null

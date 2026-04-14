@@ -1,0 +1,104 @@
+1:"$Sreact.fragment"
+2:I[22016,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js"],""]
+5:I[97367,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js"],"OutletBoundary"]
+6:"$Sreact.suspense"
+3:T8d6,<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo 1 - 计数器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        #count {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #667eea;
+            margin: 1rem 0;
+        }
+
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            margin: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: #5a6fd6;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>简单计数器</h1>
+        <div id="count">0</div>
+        <div>
+            <button onclick="decrement()">-</button>
+            <button onclick="reset()">重置</button>
+            <button onclick="increment()">+</button>
+        </div>
+    </div>
+    <script>
+        let count = 0;
+        const countEl = document.getElementById('count');
+
+        function updateDisplay() {
+            countEl.textContent = count;
+        }
+
+        function increment() {
+            count++;
+            updateDisplay();
+        }
+
+        function decrement() {
+            count--;
+            updateDisplay();
+        }
+
+        function reset() {
+            count = 0;
+            updateDisplay();
+        }
+    </script>
+</body>
+
+</html>0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"max-w-6xl mx-auto","children":[["$","div",null,{"className":"mb-6","children":["$","$L2",null,{"href":"/demos","className":"text-primary hover:underline flex items-center gap-2","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","className":"h-4 w-4","fill":"none","viewBox":"0 0 24 24","stroke":"currentColor","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M15 19l-7-7 7-7"}]}],"返回 demo 列表"]}]}],["$","div",null,{"className":"mb-6","children":[["$","h1",null,{"className":"text-3xl font-bold mb-4 text-primary","children":"简单计数器"}],["$","p",null,{"className":"text-gray-600 mb-4","children":"一个使用原生 JavaScript 实现的简单计数器"}],["$","div",null,{"className":"flex flex-wrap gap-2 mb-4","children":[["$","span","JavaScript",{"className":"px-3 py-1 bg-primary/10 text-primary text-sm rounded-full","children":"JavaScript"}],["$","span","HTML",{"className":"px-3 py-1 bg-primary/10 text-primary text-sm rounded-full","children":"HTML"}],["$","span","CSS",{"className":"px-3 py-1 bg-primary/10 text-primary text-sm rounded-full","children":"CSS"}]]}],["$","a",null,{"href":"/demos/demo1/demo.html","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg hover:opacity-90 transition-opacity","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","className":"h-4 w-4","fill":"none","viewBox":"0 0 24 24","stroke":"currentColor","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"}]}],"打开完整页面"]}]]}],["$","div",null,{"className":"card overflow-hidden","children":["$","iframe",null,{"srcDoc":"$3","title":"简单计数器","className":"w-full border-0","style":{"minHeight":"600px"},"sandbox":"allow-scripts allow-same-origin allow-forms"}]}]]}],null,"$L4"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"nWl4-WfeNA9LF-gjJi2_V"}
+4:["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]
+7:null

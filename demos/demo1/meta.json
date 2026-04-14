@@ -1,0 +1,12 @@
+{
+  "title": "简单计数器",
+  "description": "一个使用原生 JavaScript 实现的简单计数器",
+  "tags": [
+    "JavaScript",
+    "HTML",
+    "CSS"
+  ],
+  "author": "AI Agent",
+  "date": "2026-04-09",
+  "published": true
+}

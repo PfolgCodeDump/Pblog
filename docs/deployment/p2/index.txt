@@ -1,0 +1,202 @@
+1:"$Sreact.fragment"
+2:I[79520,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js"],""]
+3:I[70119,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js"],"default"]
+4:I[39756,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js"],"default"]
+5:I[37457,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js"],"default"]
+6:I[36768,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js","/_next/static/chunks/0~egvsnod26uo.js"],"default"]
+7:I[71691,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js"],"default"]
+8:I[12211,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js"],"default"]
+9:I[9457,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js"],"default"]
+a:I[51298,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js"],"default"]
+c:I[97367,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js"],"OutletBoundary"]
+d:"$Sreact.suspense"
+10:I[97367,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js"],"ViewportBoundary"]
+12:I[97367,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js"],"MetadataBoundary"]
+14:I[68027,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js"],"default",1]
+:HL["/_next/static/chunks/05_1ri05of1ja.css","style"]
+0:{"P":null,"c":["","docs","deployment","p2",""],"q":"","i":false,"f":[[["",{"children":["docs",{"children":[["collection","deployment","d",null],{"children":[["slug","p2","d",null],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/05_1ri05of1ja.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/0t0~vf8vpn6e-.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0d3shmwh5_nmn.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/_next/static/chunks/14bv56cil-9kq.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"zh-CN","children":["$","body",null,{"children":[["$","$L2",null,{"id":"structured-data-website","type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Pblog\",\"url\":\"https://PfolgCodeDump.github.io\",\"description\":\"个人博客，记录学习、生活和思考\",\"author\":{\"@type\":\"Person\",\"name\":\"Your Name\"},\"publisher\":{\"@type\":\"Person\",\"name\":\"Your Name\"},\"inLanguage\":\"zh-CN\"}"}}],false,["$","$L3",null,{}],["$","main",null,{"className":"container mx-auto px-4 py-8 relative z-10","style":{"paddingTop":"96px"},"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L6",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"border-t mt-12 py-8 relative z-20","style":{"backgroundColor":"var(--background)","borderColor":"var(--secondary)"},"children":["$","div",null,{"className":"container mx-auto px-4 text-center","children":[["$","p",null,{"style":{"color":"var(--text)"},"children":["© ",2026," ","$undefined",". All rights reserved."]}],["$","p",null,{"className":"text-sm mt-2","style":{"color":"var(--text)","opacity":0.7},"children":"基于 Next.js + TypeScript + Tailwind CSS 构建"}]]}]}],["$","$L7",null,{}],["$","$L8",null,{}],["$","$L9",null,{}],["$","$La",null,{}]]}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$Lb",[["$","script","script-0",{"src":"/_next/static/chunks/07.yc-n-0xwpq.js","async":true,"nonce":"$undefined"}]],["$","$Lc",null,{"children":["$","$d",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]]}],{},null,false,null]},null,false,"$@f"]},null,false,"$@f"]},null,false,"$@f"]},null,false,null],["$","$1","h",{"children":[null,["$","$L10",null,{"children":"$L11"}],["$","div",null,{"hidden":true,"children":["$","$L12",null,{"children":["$","$d",null,{"name":"Next.Metadata","children":"$L13"}]}]}],null]}],false]],"m":"$undefined","G":["$14",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/05_1ri05of1ja.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"nWl4-WfeNA9LF-gjJi2_V"}
+15:[]
+f:"$W15"
+16:I[22016,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js","/_next/static/chunks/07.yc-n-0xwpq.js"],""]
+17:Tca6,<h2 id="第二部分项目配置">第二部分：项目配置</h2>
+<h3 id="21-环境变量文件">2.1 环境变量文件</h3>
+<p>复制示例配置文件：</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Windows</span>
+copy .env.example .env.local
+
+<span class="hljs-comment"># macOS/Linux</span>
+<span class="hljs-built_in">cp</span> .env.example .env.local
+</code></pre>
+<h3 id="22-基础配置必需">2.2 基础配置（必需）</h3>
+<pre><code class="hljs language-env"># 网站 URL（部署后修改为实际域名
+NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+
+# 网站名称
+NEXT_PUBLIC_SITE_NAME=Pblog
+
+# 网站描述
+NEXT_PUBLIC_SITE_DESCRIPTION=个人博客
+
+# 作者名称
+NEXT_PUBLIC_AUTHOR_NAME=Your Name
+</code></pre>
+<p><strong>注意</strong>：所有 <code>NEXT_PUBLIC_</code> 前缀的变量可在客户端代码中访问，请勿存储敏感信息。</p>
+<h3 id="23-giscus-评论系统可选">2.3 Giscus 评论系统（可选）</h3>
+<h4 id="前置条件">前置条件</h4>
+<ol>
+<li>GitHub 仓库已启用 Discussions</li>
+<li>安装 <a href="https://github.com/apps/giscus">Giscus App</a> 到仓库</li>
+</ol>
+<h4 id="配置步骤">配置步骤</h4>
+<ol>
+<li>访问 <a href="https://giscus.app/">giscus.app</a></li>
+<li>按页面提示获取配置信息</li>
+<li>填入环境变量：</li>
+</ol>
+<pre><code class="hljs language-env">NEXT_PUBLIC_GISCUS_REPO=username/repo
+NEXT_PUBLIC_GISCUS_REPO_ID=your-repo-id
+NEXT_PUBLIC_GISCUS_CATEGORY=Announcements
+NEXT_PUBLIC_GISCUS_CATEGORY_ID=your-category-id
+</code></pre>
+<p><strong>禁用方式</strong>：留空上述变量即可禁用评论系统。</p>
+<h3 id="24-live2d-看板娘可选">2.4 Live2D 看板娘（可选）</h3>
+<pre><code class="hljs language-env"># 模型路径数组，设为 [] 禁用
+NEXT_PUBLIC_LIVE2D_MODELS=["/live2d/model/model.json"]
+
+# 停靠位置：left 或 right
+NEXT_PUBLIC_LIVE2D_DOCKED_POSITION=right
+
+# 模型位置 [x, y]
+NEXT_PUBLIC_LIVE2D_POSITION=[0, 60]
+
+# 缩放比例
+NEXT_PUBLIC_LIVE2D_SCALE=0.08
+
+# 舞台高度
+NEXT_PUBLIC_LIVE2D_STAGE_HEIGHT=450
+</code></pre>
+<p><strong>禁用方式</strong>：设置 <code>NEXT_PUBLIC_LIVE2D_MODELS=[]</code></p>
+<h3 id="25-粒子特效可选">2.5 粒子特效（可选）</h3>
+<pre><code class="hljs language-env"># 是否启用
+NEXT_PUBLIC_PARTICLES_ENABLED=true
+
+# 类型：petal, leaf, rain, snow, auto
+NEXT_PUBLIC_PARTICLES_TYPE=petal
+
+# 粒子数量
+NEXT_PUBLIC_PARTICLES_COUNT=50
+
+# z-index 层级
+NEXT_PUBLIC_PARTICLES_ZINDEX=0
+</code></pre>
+<p><strong>禁用方式</strong>：设置 <code>NEXT_PUBLIC_PARTICLES_ENABLED=false</code></p>
+<h3 id="26-其他配置">2.6 其他配置</h3>
+<pre><code class="hljs language-env"># 默认主题色
+NEXT_PUBLIC_DEFAULT_PRIMARY_COLOR=#ff69b4
+
+# 导航栏自动隐藏
+NEXT_PUBLIC_HEADER_AUTO_HIDE_ENABLED=true
+</code></pre>
+<h3 id="27-内容页面配置">2.7 内容页面配置</h3>
+<p>编辑以下 Markdown 文件自定义内容页面：</p>
+<ul>
+<li><code>content/spec/about/index.md</code> - 关于页面</li>
+<li><code>content/spec/journey/index.md</code> - 历程页面</li>
+<li><code>content/spec/projects/index.md</code> - 项目页面</li>
+<li><code>content/spec/information/index.md</code> - 信息页面</li>
+</ul>b:["$","div",null,{"className":"w-full","children":["$","div",null,{"className":"flex flex-col lg:flex-row","children":[["$","div",null,{"className":"lg:w-72 flex-shrink-0 hidden lg:block","children":["$","div",null,{"className":"sticky top-4 pl-4","children":["$","div",null,{"className":"card","children":[["$","$L16",null,{"href":"/docs/deployment","className":"flex items-center gap-2 mb-4 hover:opacity-80 transition-opacity","style":{"color":"var(--primary)"},"children":[["$","span",null,{"className":"text-2xl","children":"🚀"}],["$","span",null,{"className":"font-bold","children":"Pblog 部署教程"}]]}],["$","div",null,{"className":"space-y-1 max-h-[calc(100vh-12rem)] overflow-y-auto","children":[["$","$L16","p1",{"href":"/docs/deployment/p1","className":"block px-3 py-2 rounded-md text-sm transition-all hover:bg-primary/5","style":{"color":"var(--text)"},"children":[["$","span",null,{"className":"mr-2 opacity-60","children":[1,"."]}],["$","span",null,{"className":"truncate","children":"第一部分：环境准备"}]]}],["$","$L16","p2",{"href":"/docs/deployment/p2","className":"block px-3 py-2 rounded-md text-sm transition-all bg-primary/10 text-primary font-medium","style":{"color":"var(--primary)"},"children":[["$","span",null,{"className":"mr-2 opacity-60","children":[2,"."]}],["$","span",null,{"className":"truncate","children":"第二部分：项目配置"}]]}],["$","$L16","p3",{"href":"/docs/deployment/p3","className":"block px-3 py-2 rounded-md text-sm transition-all hover:bg-primary/5","style":{"color":"var(--text)"},"children":[["$","span",null,{"className":"mr-2 opacity-60","children":[3,"."]}],["$","span",null,{"className":"truncate","children":"第三部分：本地开发"}]]}],["$","$L16","p4",{"href":"/docs/deployment/p4","className":"block px-3 py-2 rounded-md text-sm transition-all hover:bg-primary/5","style":{"color":"var(--text)"},"children":[["$","span",null,{"className":"mr-2 opacity-60","children":[4,"."]}],["$","span",null,{"className":"truncate","children":"第四部分：构建与部署"}]]}],["$","$L16","p5",{"href":"/docs/deployment/p5","className":"block px-3 py-2 rounded-md text-sm transition-all hover:bg-primary/5","style":{"color":"var(--text)"},"children":[["$","span",null,{"className":"mr-2 opacity-60","children":[5,"."]}],["$","span",null,{"className":"truncate","children":"第五部分：自定义与扩展"}]]}],["$","$L16","p6",{"href":"/docs/deployment/p6","className":"block px-3 py-2 rounded-md text-sm transition-all hover:bg-primary/5","style":{"color":"var(--text)"},"children":[["$","span",null,{"className":"mr-2 opacity-60","children":[6,"."]}],["$","span",null,{"className":"truncate","children":"第六部分：常见问题"}]]}],["$","$L16","summary",{"href":"/docs/deployment/summary","className":"block px-3 py-2 rounded-md text-sm transition-all hover:bg-primary/5","style":{"color":"var(--text)"},"children":[["$","span",null,{"className":"mr-2 opacity-60","children":[7,"."]}],["$","span",null,{"className":"truncate","children":"总结"}]]}]]}]]}]}]}],["$","div",null,{"className":"flex-1 min-w-0 px-4 lg:px-8","children":[["$","$L16",null,{"href":"/docs/deployment","className":"inline-flex items-center gap-2 mb-6 hover:opacity-80 transition-opacity lg:hidden","style":{"color":"var(--primary)"},"children":[["$","span",null,{"children":"←"}],["$","span",null,{"children":["返回 ","Pblog 部署教程"]}]]}],["$","h1",null,{"className":"text-4xl font-bold mb-4","style":{"color":"var(--primary)"},"children":"第二部分：项目配置"}],["$","p",null,{"className":"text-xl mb-8","style":{"color":"var(--text)","opacity":0.8},"children":"环境变量与功能配置"}],["$","div",null,{"className":"prose max-w-none mb-12 post-content","dangerouslySetInnerHTML":{"__html":"$17"}}],"$L18","$L19"]}],"$L1a"]}]}]
+1b:I[28245,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js","/_next/static/chunks/07.yc-n-0xwpq.js"],"default"]
+1c:I[55132,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js","/_next/static/chunks/07.yc-n-0xwpq.js"],"default"]
+18:["$","div",null,{"className":"grid grid-cols-2 gap-6 mb-12","children":[["$","div",null,{"className":"text-left","children":["$","$L16",null,{"href":"/docs/deployment/p1","className":"block p-4 rounded-lg card hover:translate-x-1 transition-all","children":[["$","div",null,{"className":"text-sm mb-1","style":{"color":"var(--text)","opacity":0.6},"children":"上一篇"}],["$","div",null,{"className":"font-semibold","style":{"color":"var(--primary)"},"children":"第一部分：环境准备"}]]}]}],["$","div",null,{"className":"text-right","children":["$","$L16",null,{"href":"/docs/deployment/p3","className":"block p-4 rounded-lg card hover:-translate-x-1 transition-all","children":[["$","div",null,{"className":"text-sm mb-1","style":{"color":"var(--text)","opacity":0.6},"children":"下一篇"}],["$","div",null,{"className":"font-semibold","style":{"color":"var(--primary)"},"children":"第三部分：本地开发"}]]}]}]]}]
+19:["$","$L1b",null,{}]
+1d:Tca6,<h2 id="第二部分项目配置">第二部分：项目配置</h2>
+<h3 id="21-环境变量文件">2.1 环境变量文件</h3>
+<p>复制示例配置文件：</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Windows</span>
+copy .env.example .env.local
+
+<span class="hljs-comment"># macOS/Linux</span>
+<span class="hljs-built_in">cp</span> .env.example .env.local
+</code></pre>
+<h3 id="22-基础配置必需">2.2 基础配置（必需）</h3>
+<pre><code class="hljs language-env"># 网站 URL（部署后修改为实际域名
+NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+
+# 网站名称
+NEXT_PUBLIC_SITE_NAME=Pblog
+
+# 网站描述
+NEXT_PUBLIC_SITE_DESCRIPTION=个人博客
+
+# 作者名称
+NEXT_PUBLIC_AUTHOR_NAME=Your Name
+</code></pre>
+<p><strong>注意</strong>：所有 <code>NEXT_PUBLIC_</code> 前缀的变量可在客户端代码中访问，请勿存储敏感信息。</p>
+<h3 id="23-giscus-评论系统可选">2.3 Giscus 评论系统（可选）</h3>
+<h4 id="前置条件">前置条件</h4>
+<ol>
+<li>GitHub 仓库已启用 Discussions</li>
+<li>安装 <a href="https://github.com/apps/giscus">Giscus App</a> 到仓库</li>
+</ol>
+<h4 id="配置步骤">配置步骤</h4>
+<ol>
+<li>访问 <a href="https://giscus.app/">giscus.app</a></li>
+<li>按页面提示获取配置信息</li>
+<li>填入环境变量：</li>
+</ol>
+<pre><code class="hljs language-env">NEXT_PUBLIC_GISCUS_REPO=username/repo
+NEXT_PUBLIC_GISCUS_REPO_ID=your-repo-id
+NEXT_PUBLIC_GISCUS_CATEGORY=Announcements
+NEXT_PUBLIC_GISCUS_CATEGORY_ID=your-category-id
+</code></pre>
+<p><strong>禁用方式</strong>：留空上述变量即可禁用评论系统。</p>
+<h3 id="24-live2d-看板娘可选">2.4 Live2D 看板娘（可选）</h3>
+<pre><code class="hljs language-env"># 模型路径数组，设为 [] 禁用
+NEXT_PUBLIC_LIVE2D_MODELS=["/live2d/model/model.json"]
+
+# 停靠位置：left 或 right
+NEXT_PUBLIC_LIVE2D_DOCKED_POSITION=right
+
+# 模型位置 [x, y]
+NEXT_PUBLIC_LIVE2D_POSITION=[0, 60]
+
+# 缩放比例
+NEXT_PUBLIC_LIVE2D_SCALE=0.08
+
+# 舞台高度
+NEXT_PUBLIC_LIVE2D_STAGE_HEIGHT=450
+</code></pre>
+<p><strong>禁用方式</strong>：设置 <code>NEXT_PUBLIC_LIVE2D_MODELS=[]</code></p>
+<h3 id="25-粒子特效可选">2.5 粒子特效（可选）</h3>
+<pre><code class="hljs language-env"># 是否启用
+NEXT_PUBLIC_PARTICLES_ENABLED=true
+
+# 类型：petal, leaf, rain, snow, auto
+NEXT_PUBLIC_PARTICLES_TYPE=petal
+
+# 粒子数量
+NEXT_PUBLIC_PARTICLES_COUNT=50
+
+# z-index 层级
+NEXT_PUBLIC_PARTICLES_ZINDEX=0
+</code></pre>
+<p><strong>禁用方式</strong>：设置 <code>NEXT_PUBLIC_PARTICLES_ENABLED=false</code></p>
+<h3 id="26-其他配置">2.6 其他配置</h3>
+<pre><code class="hljs language-env"># 默认主题色
+NEXT_PUBLIC_DEFAULT_PRIMARY_COLOR=#ff69b4
+
+# 导航栏自动隐藏
+NEXT_PUBLIC_HEADER_AUTO_HIDE_ENABLED=true
+</code></pre>
+<h3 id="27-内容页面配置">2.7 内容页面配置</h3>
+<p>编辑以下 Markdown 文件自定义内容页面：</p>
+<ul>
+<li><code>content/spec/about/index.md</code> - 关于页面</li>
+<li><code>content/spec/journey/index.md</code> - 历程页面</li>
+<li><code>content/spec/projects/index.md</code> - 项目页面</li>
+<li><code>content/spec/information/index.md</code> - 信息页面</li>
+</ul>1a:["$","div",null,{"className":"lg:w-72 flex-shrink-0 hidden xl:block","children":["$","div",null,{"className":"sticky top-4 pr-4","children":["$","div",null,{"className":"card","children":[["$","h3",null,{"className":"text-lg font-semibold mb-4","children":"目录"}],["$","div",null,{"className":"max-h-[calc(100vh-8rem)] overflow-y-auto","children":["$","$L1c",null,{"content":"$1d"}]}]]}]}]}]
+11:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1e:I[27201,["/_next/static/chunks/0t0~vf8vpn6e-.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/14bv56cil-9kq.js"],"IconMark"]
+e:null
+13:[["$","title","0",{"children":"第二部分：项目配置 | Pblog"}],["$","meta","1",{"name":"description","content":"环境变量与功能配置"}],["$","link","2",{"rel":"author","href":"https://PfolgCodeDump.github.io"}],["$","meta","3",{"name":"author","content":"Your Name"}],["$","meta","4",{"name":"keywords","content":"博客,个人博客,技术博客,学习,生活,思考"}],["$","meta","5",{"name":"creator","content":"Your Name"}],["$","meta","6",{"name":"publisher","content":"Your Name"}],["$","meta","7",{"name":"robots","content":"index, follow"}],["$","meta","8",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","meta","9",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","10",{"property":"og:title","content":"Pblog"}],["$","meta","11",{"property":"og:description","content":"个人博客，记录学习、生活和思考"}],["$","meta","12",{"property":"og:url","content":"https://pfolgcodedump.github.io/"}],["$","meta","13",{"property":"og:site_name","content":"Pblog"}],["$","meta","14",{"property":"og:locale","content":"zh_CN"}],["$","meta","15",{"property":"og:image","content":"https://pfolgcodedump.github.io/favicon.png"}],["$","meta","16",{"property":"og:image:width","content":"512"}],["$","meta","17",{"property":"og:image:height","content":"512"}],["$","meta","18",{"property":"og:image:alt","content":"Pblog"}],["$","meta","19",{"property":"og:type","content":"website"}],["$","meta","20",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","21",{"name":"twitter:title","content":"Pblog"}],["$","meta","22",{"name":"twitter:description","content":"个人博客，记录学习、生活和思考"}],["$","meta","23",{"name":"twitter:image","content":"https://pfolgcodedump.github.io/favicon.png"}],["$","link","24",{"rel":"icon","href":"/favicon.png"}],["$","link","25",{"rel":"apple-touch-icon","href":"/favicon.png"}],["$","$L1e","26",{}]]
