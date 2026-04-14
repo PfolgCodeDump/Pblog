@@ -2,6 +2,11 @@
 
 > [!NOTE]
 > 本项目90%以上代码由AI生成
+>
+> GitHub 部署: <https://pfolgcodedump.github.io/Pblog/> (不推荐)
+>
+> Cloudflare 部署: <https://pg25-lsae.eu.org/> (推荐)
+> 这两个站点的文档集中都有关于部署的文档
 
 基于 Next.js (App Router) + TypeScript + Tailwind CSS 的纯静态博客生成器。
 
