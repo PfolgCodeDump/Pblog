@@ -3,8 +3,8 @@ self.__BUILD_MANIFEST = {
     "afterFiles": [],
     "beforeFiles": [
       {
-        "source": "/Pblog//_next/:path+",
-        "destination": "/Pblog/_next/:path+"
+        "source": "/FunRadiusP//_next/:path+",
+        "destination": "/FunRadiusP/_next/:path+"
       }
     ],
     "fallback": []
