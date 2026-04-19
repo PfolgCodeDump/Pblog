@@ -140,6 +140,9 @@ FunRadiusP/
 
 ## 文章格式
 
+> [!CAUTION]
+> 必须避免使用所有可能导致路径解析错误的问题，如：非ASCII字符、路径中包含空格等
+
 在 `content/posts/` 目录下创建文章文件夹，每个文件夹包含 `index.md` 文件：
 
 ```markdown
