@@ -1,3 +1,9 @@
+// Project: FunRadiusP
+// Author: Pfolg <https://github.com/csy214-beep>
+// Environment: TRAE
+// LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
+// Repo: <https://github.com/PfolgCodeDump/FunRadiusP>
+
 const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");

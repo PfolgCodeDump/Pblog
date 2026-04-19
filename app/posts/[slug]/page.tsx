@@ -1,3 +1,9 @@
+// Project: FunRadiusP
+// Author: Pfolg <https://github.com/csy214-beep>
+// Environment: TRAE
+// LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
+// Repo: <https://github.com/PfolgCodeDump/FunRadiusP>
+
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -28,9 +34,9 @@ export async function generateMetadata({
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://yourdomain.com";
   const image = post.image
-    ? (post.image.startsWith("http://") || post.image.startsWith("https://")
-        ? post.image
-        : `${siteUrl}${post.image}`)
+    ? post.image.startsWith("http://") || post.image.startsWith("https://")
+      ? post.image
+      : `${siteUrl}${post.image}`
     : `${siteUrl}/favicon.png`;
 
   return {
@@ -70,15 +76,25 @@ export default async function PostPage({ params }: PostPageProps) {
 
   const posts: Post[] = getPosts();
   const { prev, next } = getPrevNextPosts(posts, post.id);
-  const htmlContent = await markdownToHtml(post.content, { type: 'post', id: post.id });
+  const htmlContent = await markdownToHtml(post.content, {
+    type: "post",
+    id: post.id,
+  });
 
-  const isAutoHideEnabled = process.env.NEXT_PUBLIC_HEADER_AUTO_HIDE_ENABLED !== "false";
+  const isAutoHideEnabled =
+    process.env.NEXT_PUBLIC_HEADER_AUTO_HIDE_ENABLED !== "false";
 
   return (
     <>
       <StructuredData type="article" data={post} />
       {post.player && <MusicPlayer player={post.player} />}
-      <div className={isAutoHideEnabled ? "max-w-6xl mx-auto px-4" : "max-w-6xl mx-auto px-4 pt-20"}>
+      <div
+        className={
+          isAutoHideEnabled
+            ? "max-w-6xl mx-auto px-4"
+            : "max-w-6xl mx-auto px-4 pt-20"
+        }
+      >
         <div className="flex flex-col lg:flex-row gap-8">
           {/* 主内容 */}
           <div className="lg:w-3/4 min-w-0">

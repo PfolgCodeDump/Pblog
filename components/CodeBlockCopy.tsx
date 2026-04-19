@@ -1,17 +1,23 @@
-'use client';
+// Project: FunRadiusP
+// Author: Pfolg <https://github.com/csy214-beep>
+// Environment: TRAE
+// LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
+// Repo: <https://github.com/PfolgCodeDump/FunRadiusP>
 
-import { useEffect } from 'react';
+"use client";
+
+import { useEffect } from "react";
 
 export default function CodeBlockCopy() {
   useEffect(() => {
     const addCopyButtons = () => {
-      const codeBlocks = document.querySelectorAll('pre');
-      
+      const codeBlocks = document.querySelectorAll("pre");
+
       codeBlocks.forEach((pre) => {
-        if (pre.querySelector('.copy-button')) return;
-        
-        const button = document.createElement('button');
-        button.className = 'copy-button';
+        if (pre.querySelector(".copy-button")) return;
+
+        const button = document.createElement("button");
+        button.className = "copy-button";
         button.innerHTML = `
           <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
@@ -21,39 +27,39 @@ export default function CodeBlockCopy() {
             <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
         `;
-        button.title = '复制代码';
-        
-        button.addEventListener('click', async () => {
-          const code = pre.querySelector('code');
+        button.title = "复制代码";
+
+        button.addEventListener("click", async () => {
+          const code = pre.querySelector("code");
           if (!code) return;
-          
+
           try {
-            await navigator.clipboard.writeText(code.textContent || '');
-            button.classList.add('copied');
-            
+            await navigator.clipboard.writeText(code.textContent || "");
+            button.classList.add("copied");
+
             setTimeout(() => {
-              button.classList.remove('copied');
+              button.classList.remove("copied");
             }, 2000);
           } catch (error) {
-            console.error('复制失败:', error);
+            console.error("复制失败:", error);
           }
         });
-        
-        pre.style.position = 'relative';
+
+        pre.style.position = "relative";
         pre.appendChild(button);
       });
     };
-    
+
     addCopyButtons();
-    
+
     const observer = new MutationObserver(() => {
       addCopyButtons();
     });
-    
+
     observer.observe(document.body, { childList: true, subtree: true });
-    
+
     return () => observer.disconnect();
   }, []);
-  
+
   return null;
 }

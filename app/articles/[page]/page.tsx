@@ -1,3 +1,9 @@
+// Project: FunRadiusP
+// Author: Pfolg <https://github.com/csy214-beep>
+// Environment: TRAE
+// LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
+// Repo: <https://github.com/PfolgCodeDump/FunRadiusP>
+
 import Link from "next/link";
 import { getPosts } from "../../../lib/posts";
 import { paginate, formatDate } from "../../../lib/utils";
@@ -22,10 +28,11 @@ export default async function ArticlesPage({
   const { page } = await params;
   const currentPage = parseInt(page || "1");
   const posts = getPosts();
-  const {
-    items: paginatedPosts,
-    totalPages,
-  } = paginate(posts, currentPage, PAGE_SIZE);
+  const { items: paginatedPosts, totalPages } = paginate(
+    posts,
+    currentPage,
+    PAGE_SIZE,
+  );
 
   return (
     <div className="max-w-4xl mx-auto">

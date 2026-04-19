@@ -1,9 +1,16 @@
+// Project: FunRadiusP
+// Author: Pfolg <https://github.com/csy214-beep>
+// Environment: TRAE
+// LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
+// Repo: <https://github.com/PfolgCodeDump/FunRadiusP>
+
 import type { Metadata } from "next";
 import { markdownToHtml, getSpecPageContent } from "../../lib/markdown";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://yourdomain.com";
 const siteName = process.env.NEXT_PUBLIC_SITE_NAME || "FunRadiusP";
-const siteDescription = process.env.NEXT_PUBLIC_SITE_DESCRIPTION || "个人博客，记录学习、生活和思考";
+const siteDescription =
+  process.env.NEXT_PUBLIC_SITE_DESCRIPTION || "个人博客，记录学习、生活和思考";
 
 export const metadata: Metadata = {
   title: "历程",

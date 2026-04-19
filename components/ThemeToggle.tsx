@@ -1,3 +1,9 @@
+// Project: FunRadiusP
+// Author: Pfolg <https://github.com/csy214-beep>
+// Environment: TRAE
+// LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
+// Repo: <https://github.com/PfolgCodeDump/FunRadiusP>
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -36,7 +42,12 @@ export default function ThemeToggle({ className = "" }: ThemeToggleProps) {
       aria-label={theme === "light" ? "切换到暗色主题" : "切换到明亮主题"}
     >
       {theme === "light" ? (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg
+          className="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -45,7 +56,12 @@ export default function ThemeToggle({ className = "" }: ThemeToggleProps) {
           />
         </svg>
       ) : (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg
+          className="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
           <path
             strokeLinecap="round"
             strokeLinejoin="round"

@@ -1,3 +1,9 @@
+// Project: FunRadiusP
+// Author: Pfolg <https://github.com/csy214-beep>
+// Environment: TRAE
+// LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
+// Repo: <https://github.com/PfolgCodeDump/FunRadiusP>
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -22,7 +28,10 @@ export default function NotFound() {
           />
         </div>
 
-        <h2 className="text-2xl font-bold mb-4" style={{ color: "var(--text)" }}>
+        <h2
+          className="text-2xl font-bold mb-4"
+          style={{ color: "var(--text)" }}
+        >
           {chars.map((char, index) => (
             <span
               key={index}
@@ -38,7 +47,10 @@ export default function NotFound() {
           ))}
         </h2>
 
-        <p className="text-sm mb-8 leading-relaxed" style={{ color: "var(--text)", opacity: 0.8 }}>
+        <p
+          className="text-sm mb-8 leading-relaxed"
+          style={{ color: "var(--text)", opacity: 0.8 }}
+        >
           你可以选择刷新页面或者返回主页
         </p>
 
@@ -46,8 +58,12 @@ export default function NotFound() {
           href="/"
           className="inline-block text-white text-base px-8 py-3 rounded-lg transition-colors duration-200 font-bold tracking-wider"
           style={{ backgroundColor: "var(--primary)" }}
-          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "var(--dark)"}
-          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "var(--primary)"}
+          onMouseEnter={(e) =>
+            (e.currentTarget.style.backgroundColor = "var(--dark)")
+          }
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.backgroundColor = "var(--primary)")
+          }
         >
           返回首页
         </Link>

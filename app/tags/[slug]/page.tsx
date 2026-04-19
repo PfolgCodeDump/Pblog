@@ -1,3 +1,9 @@
+// Project: FunRadiusP
+// Author: Pfolg <https://github.com/csy214-beep>
+// Environment: TRAE
+// LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
+// Repo: <https://github.com/PfolgCodeDump/FunRadiusP>
+
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getTags, getPostsByTag } from "../../../lib/posts";
@@ -7,12 +13,12 @@ interface TagPageProps {
   params: Promise<{ slug: string }>;
 }
 
-  export async function generateStaticParams() {
-    const tags = getTags();
-    return tags.map((tag) => ({
-      slug: tag,
-    }));
-  }
+export async function generateStaticParams() {
+  const tags = getTags();
+  return tags.map((tag) => ({
+    slug: tag,
+  }));
+}
 
 export default async function TagPage({ params }: TagPageProps) {
   const { slug } = await params;

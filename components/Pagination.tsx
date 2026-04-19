@@ -1,4 +1,10 @@
-import Link from 'next/link';
+// Project: FunRadiusP
+// Author: Pfolg <https://github.com/csy214-beep>
+// Environment: TRAE
+// LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
+// Repo: <https://github.com/PfolgCodeDump/FunRadiusP>
+
+import Link from "next/link";
 
 interface PaginationProps {
   currentPage: number;
@@ -6,7 +12,11 @@ interface PaginationProps {
   basePath: string;
 }
 
-export default function Pagination({ currentPage, totalPages, basePath }: PaginationProps) {
+export default function Pagination({
+  currentPage,
+  totalPages,
+  basePath,
+}: PaginationProps) {
   if (totalPages <= 1) return null;
 
   // 生成页码范围，限制显示的页码数量
@@ -39,9 +49,7 @@ export default function Pagination({ currentPage, totalPages, basePath }: Pagina
         {currentPage > 1 && (
           <Link
             href={
-              currentPage === 2
-                ? basePath
-                : `${basePath}/${currentPage - 1}`
+              currentPage === 2 ? basePath : `${basePath}/${currentPage - 1}`
             }
             className="px-4 py-2 border rounded-l-md transition-colors hover:opacity-80"
             style={{

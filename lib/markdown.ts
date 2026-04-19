@@ -1,3 +1,9 @@
+// Project: FunRadiusP
+// Author: Pfolg <https://github.com/csy214-beep>
+// Environment: TRAE
+// LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
+// Repo: <https://github.com/PfolgCodeDump/FunRadiusP>
+
 import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
@@ -197,7 +203,7 @@ function processTimelineSyntax(markdown: string): string {
 // Markdown 转 HTML
 export async function markdownToHtml(
   markdown: string,
-  context?: { type: 'post' | 'doc', id: string, collection?: string },
+  context?: { type: "post" | "doc"; id: string; collection?: string },
   addHeadingIds: boolean = true,
 ): Promise<string> {
   // 处理时间线语法
@@ -205,14 +211,14 @@ export async function markdownToHtml(
 
   // 处理本地相对路径图片 - 在 Markdown 阶段替换
   if (context) {
-    if (context.type === 'post') {
+    if (context.type === "post") {
       processedMarkdown = processedMarkdown.replace(
         /!\[([^\]]*)\]\((?!http|https|\/)([^)]+)\)/g,
         (match, alt, src) => {
           return `![${alt}](/posts/${context.id}/${src})`;
         },
       );
-    } else if (context.type === 'doc' && context.collection) {
+    } else if (context.type === "doc" && context.collection) {
       processedMarkdown = processedMarkdown.replace(
         /!\[([^\]]*)\]\((?!http|https|\/)([^)]+)\)/g,
         (match, alt, src) => {
@@ -251,14 +257,20 @@ export async function markdownToHtml(
 
 // 读取特殊页面的 Markdown 文件
 export async function getSpecPageContent(page: string): Promise<string> {
-  const filePath = path.join(process.cwd(), 'content', 'spec', page, 'index.md');
+  const filePath = path.join(
+    process.cwd(),
+    "content",
+    "spec",
+    page,
+    "index.md",
+  );
   try {
     if (fs.existsSync(filePath)) {
-      return fs.readFileSync(filePath, 'utf8');
+      return fs.readFileSync(filePath, "utf8");
     }
-    return '';
+    return "";
   } catch (error) {
     console.error(`Error reading spec page ${page}:`, error);
-    return '';
+    return "";
   }
 }

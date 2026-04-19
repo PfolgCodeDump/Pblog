@@ -1,13 +1,18 @@
+# Project: FunRadiusP
+# Author: Pfolg <https://github.com/csy214-beep>
+# Environment: TRAE
+# LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
+
 name: Deploy to GitHub Pages
 on:
   # push:
   #   branches: [main]
-  workflow_dispatch:   # 手动触发
+  workflow_dispatch: # 手动触发
 jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  
+      contents: write
     steps:
       - uses: actions/checkout@v4
 

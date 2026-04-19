@@ -1,6 +1,12 @@
-'use client';
+// Project: FunRadiusP
+// Author: Pfolg <https://github.com/csy214-beep>
+// Environment: TRAE
+// LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
+// Repo: <https://github.com/PfolgCodeDump/FunRadiusP>
 
-import Link from 'next/link';
+"use client";
+
+import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
@@ -8,13 +14,16 @@ import ColorPicker from "./ColorPicker";
 
 export default function Header() {
   const [isMoreMenuOpen, setIsMoreMenuOpen] = useState(false);
-  const [isHeaderVisible, setIsHeaderVisible] = useState(process.env.NEXT_PUBLIC_HEADER_AUTO_HIDE_ENABLED === 'false');
+  const [isHeaderVisible, setIsHeaderVisible] = useState(
+    process.env.NEXT_PUBLIC_HEADER_AUTO_HIDE_ENABLED === "false",
+  );
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const headerRef = useRef<HTMLElement>(null);
   const moreMenuRef = useRef<HTMLDivElement>(null);
 
-  const isAutoHideEnabled = process.env.NEXT_PUBLIC_HEADER_AUTO_HIDE_ENABLED !== 'false';
+  const isAutoHideEnabled =
+    process.env.NEXT_PUBLIC_HEADER_AUTO_HIDE_ENABLED !== "false";
 
   const isActive = (href: string) => {
     if (href === "/") {

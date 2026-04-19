@@ -1,10 +1,17 @@
+// Project: FunRadiusP
+// Author: Pfolg <https://github.com/csy214-beep>
+// Environment: TRAE
+// LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
+// Repo: <https://github.com/PfolgCodeDump/FunRadiusP>
+
 import type { Metadata } from "next";
-import Link from 'next/link';
-import { getCategories, getPostsByCategory } from '../../lib/posts';
+import Link from "next/link";
+import { getCategories, getPostsByCategory } from "../../lib/posts";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://yourdomain.com";
 const siteName = process.env.NEXT_PUBLIC_SITE_NAME || "FunRadiusP";
-const siteDescription = process.env.NEXT_PUBLIC_SITE_DESCRIPTION || "个人博客，记录学习、生活和思考";
+const siteDescription =
+  process.env.NEXT_PUBLIC_SITE_DESCRIPTION || "个人博客，记录学习、生活和思考";
 
 export const metadata: Metadata = {
   title: "分类",
@@ -44,7 +51,10 @@ export default function CategoriesPage() {
             {categories.map((category) => {
               const posts = getPostsByCategory(category);
               return (
-                <tr key={category} className="border-b border-gray-200 hover:bg-gray-50">
+                <tr
+                  key={category}
+                  className="border-b border-gray-200 hover:bg-gray-50"
+                >
                   <td className="py-3 px-4">
                     <Link
                       href={`/categories/${category}`}

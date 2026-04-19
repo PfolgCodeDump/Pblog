@@ -1,3 +1,9 @@
+// Project: FunRadiusP
+// Author: Pfolg <https://github.com/csy214-beep>
+// Environment: TRAE
+// LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
+// Repo: <https://github.com/PfolgCodeDump/FunRadiusP>
+
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
@@ -248,11 +254,13 @@ export default function MusicPlayer({ player }: MusicPlayerProps) {
               onTimeUpdate={() => {
                 if (audioRef.current) {
                   const visibleAudio = document.querySelector(
-                    ".local-player audio:not([style*='left: -9999px'])"
+                    ".local-player audio:not([style*='left: -9999px'])",
                   ) as HTMLAudioElement;
                   if (
                     visibleAudio &&
-                    Math.abs(visibleAudio.currentTime - audioRef.current.currentTime) > 0.5
+                    Math.abs(
+                      visibleAudio.currentTime - audioRef.current.currentTime,
+                    ) > 0.5
                   ) {
                     audioRef.current.currentTime = visibleAudio.currentTime;
                   }

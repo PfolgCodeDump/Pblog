@@ -1,3 +1,9 @@
+// Project: FunRadiusP
+// Author: Pfolg <https://github.com/csy214-beep>
+// Environment: TRAE
+// LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
+// Repo: <https://github.com/PfolgCodeDump/FunRadiusP>
+
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -52,13 +58,19 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
         <div className="flex items-start gap-4">
           <span className="text-5xl">{docCollection.icon}</span>
           <div>
-            <h1 className="text-3xl font-bold mb-2" style={{ color: "var(--primary)" }}>
+            <h1
+              className="text-3xl font-bold mb-2"
+              style={{ color: "var(--primary)" }}
+            >
               {docCollection.title}
             </h1>
             <p style={{ color: "var(--text)", opacity: 0.8 }}>
               {docCollection.description}
             </p>
-            <div className="mt-4 text-sm" style={{ color: "var(--text)", opacity: 0.6 }}>
+            <div
+              className="mt-4 text-sm"
+              style={{ color: "var(--text)", opacity: 0.6 }}
+            >
               共 {docCollection.docs.length} 篇文档
             </div>
           </div>
@@ -83,11 +95,17 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
                 {index + 1}
               </span>
               <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold mb-1" style={{ color: "var(--primary)" }}>
+                <h3
+                  className="text-lg font-semibold mb-1"
+                  style={{ color: "var(--primary)" }}
+                >
                   {doc.title}
                 </h3>
                 {doc.description && (
-                  <p className="text-sm" style={{ color: "var(--text)", opacity: 0.7 }}>
+                  <p
+                    className="text-sm"
+                    style={{ color: "var(--text)", opacity: 0.7 }}
+                  >
                     {doc.description}
                   </p>
                 )}

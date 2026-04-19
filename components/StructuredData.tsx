@@ -1,3 +1,9 @@
+// Project: FunRadiusP
+// Author: Pfolg <https://github.com/csy214-beep>
+// Environment: TRAE
+// LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
+// Repo: <https://github.com/PfolgCodeDump/FunRadiusP>
+
 import Script from "next/script";
 
 interface StructuredDataProps {
@@ -72,9 +78,10 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           name: authorName,
         },
         image: data?.image
-          ? (data.image.startsWith("http://") || data.image.startsWith("https://")
-              ? data.image
-              : `${siteUrl}${data.image}`)
+          ? data.image.startsWith("http://") ||
+            data.image.startsWith("https://")
+            ? data.image
+            : `${siteUrl}${data.image}`
           : `${siteUrl}/favicon.png`,
         keywords: data?.tags?.join(", ") || "",
         inLanguage: "zh-CN",

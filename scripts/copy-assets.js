@@ -1,3 +1,9 @@
+// Project: FunRadiusP
+// Author: Pfolg <https://github.com/csy214-beep>
+// Environment: TRAE
+// LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
+// Repo: <https://github.com/PfolgCodeDump/FunRadiusP>
+
 const fs = require("fs");
 const path = require("path");
 
@@ -68,17 +74,17 @@ function copyContentDir(sourceDir, targetDir, options = {}) {
 }
 
 function copyAssets(isDev = false) {
-  const baseTargetDir = isDev 
+  const baseTargetDir = isDev
     ? path.join(__dirname, "..", "public")
     : path.join(__dirname, "..", "output");
 
-  console.log(`Copying assets for ${isDev ? 'development' : 'production'}...`);
+  console.log(`Copying assets for ${isDev ? "development" : "production"}...`);
 
   // Copy posts
   const postsCopied = copyContentDir(
     path.join(__dirname, "..", "content", "posts"),
     path.join(baseTargetDir, "posts"),
-    { skipMarkdown: true }
+    { skipMarkdown: true },
   );
   console.log(`Posts copied: ${postsCopied} files`);
 
@@ -86,7 +92,7 @@ function copyAssets(isDev = false) {
   const demosCopied = copyContentDir(
     path.join(__dirname, "..", "content", "demos"),
     path.join(baseTargetDir, "demos"),
-    { isDemo: true }
+    { isDemo: true },
   );
   console.log(`Demos copied: ${demosCopied} files`);
 
@@ -94,7 +100,7 @@ function copyAssets(isDev = false) {
   const docsCopied = copyContentDir(
     path.join(__dirname, "..", "content", "docs"),
     path.join(baseTargetDir, "docs"),
-    { skipMarkdown: true, skipMeta: true }
+    { skipMarkdown: true, skipMeta: true },
   );
   console.log(`Docs copied: ${docsCopied} files`);
 
@@ -103,5 +109,5 @@ function copyAssets(isDev = false) {
 }
 
 // Check if running as dev or production
-const isDev = process.argv.includes('--dev');
+const isDev = process.argv.includes("--dev");
 copyAssets(isDev);

@@ -1,3 +1,9 @@
+// Project: FunRadiusP
+// Author: Pfolg <https://github.com/csy214-beep>
+// Environment: TRAE
+// LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
+// Repo: <https://github.com/PfolgCodeDump/FunRadiusP>
+
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -79,7 +85,9 @@ function DocSidebar({
                 ? "bg-primary/10 text-primary font-medium"
                 : "hover:bg-primary/5"
             }`}
-            style={{ color: doc.id === currentDocId ? "var(--primary)" : "var(--text)" }}
+            style={{
+              color: doc.id === currentDocId ? "var(--primary)" : "var(--text)",
+            }}
           >
             <span className="mr-2 opacity-60">{index + 1}.</span>
             <span className="truncate">{doc.title}</span>
@@ -106,7 +114,8 @@ export default async function DocPage({ params }: DocPageProps) {
     collection: collection,
   });
 
-  const isAutoHideEnabled = process.env.NEXT_PUBLIC_HEADER_AUTO_HIDE_ENABLED !== "false";
+  const isAutoHideEnabled =
+    process.env.NEXT_PUBLIC_HEADER_AUTO_HIDE_ENABLED !== "false";
 
   return (
     <div className={isAutoHideEnabled ? "w-full" : "w-full pt-20"}>
@@ -164,10 +173,16 @@ export default async function DocPage({ params }: DocPageProps) {
                   href={`/docs/${collection}/${encodeURIComponent(prev.id)}`}
                   className="block p-4 rounded-lg card hover:translate-x-1 transition-all"
                 >
-                  <div className="text-sm mb-1" style={{ color: "var(--text)", opacity: 0.6 }}>
+                  <div
+                    className="text-sm mb-1"
+                    style={{ color: "var(--text)", opacity: 0.6 }}
+                  >
                     上一篇
                   </div>
-                  <div className="font-semibold" style={{ color: "var(--primary)" }}>
+                  <div
+                    className="font-semibold"
+                    style={{ color: "var(--primary)" }}
+                  >
                     {prev.title}
                   </div>
                 </Link>
@@ -179,10 +194,16 @@ export default async function DocPage({ params }: DocPageProps) {
                   href={`/docs/${collection}/${encodeURIComponent(next.id)}`}
                   className="block p-4 rounded-lg card hover:-translate-x-1 transition-all"
                 >
-                  <div className="text-sm mb-1" style={{ color: "var(--text)", opacity: 0.6 }}>
+                  <div
+                    className="text-sm mb-1"
+                    style={{ color: "var(--text)", opacity: 0.6 }}
+                  >
                     下一篇
                   </div>
-                  <div className="font-semibold" style={{ color: "var(--primary)" }}>
+                  <div
+                    className="font-semibold"
+                    style={{ color: "var(--primary)" }}
+                  >
                     {next.title}
                   </div>
                 </Link>

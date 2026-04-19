@@ -1,3 +1,9 @@
+// Project: FunRadiusP
+// Author: Pfolg <https://github.com/csy214-beep>
+// Environment: TRAE
+// LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
+// Repo: <https://github.com/PfolgCodeDump/FunRadiusP>
+
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "../components/Header";
@@ -10,7 +16,8 @@ import Particles from "../components/Particles";
 import StructuredData from "../components/StructuredData";
 
 const siteName = process.env.NEXT_PUBLIC_SITE_NAME || "FunRadiusP";
-const siteDescription = process.env.NEXT_PUBLIC_SITE_DESCRIPTION || "个人博客，记录学习、生活和思考";
+const siteDescription =
+  process.env.NEXT_PUBLIC_SITE_DESCRIPTION || "个人博客，记录学习、生活和思考";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://yourdomain.com";
 const authorName = process.env.NEXT_PUBLIC_AUTHOR_NAME || "Your Name";
 const defaultImage = `${siteUrl}/favicon.png`;
