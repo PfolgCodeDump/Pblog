@@ -1,9 +1,3 @@
-// Project: FunRadiusP
-// Author: Pfolg <https://github.com/csy214-beep>
-// Environment: TRAE
-// LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
-// Repo: <https://github.com/PfolgCodeDump/FunRadiusP>
-
 const fs = require("fs");
 const path = require("path");
 
@@ -104,8 +98,31 @@ function copyAssets(isDev = false) {
   );
   console.log(`Docs copied: ${docsCopied} files`);
 
-  const total = postsCopied + demosCopied + docsCopied;
-  console.log(`\nTotal assets copied: ${total} files`);
+  // Copy moments
+  const momentsCopied = copyContentDir(
+    path.join(__dirname, "..", "content", "moments"),
+    path.join(baseTargetDir, "moments"),
+    { skipMarkdown: true },
+  );
+  console.log(`Moments copied: ${momentsCopied} files`);
+
+  // Copy spec
+  let specTotal = 0;
+  const specSubDirs = ["about", "information", "journey", "projects"];
+  for (const subDir of specSubDirs) {
+    const src = path.join(__dirname, "..", "content", "spec", subDir);
+    const dest = path.join(baseTargetDir, subDir);
+    const copied = copyDirectory(src, dest, { skipMarkdown: true });
+    specTotal += copied;
+    console.log(
+      `+ ${subDir.charAt(0).toUpperCase() + subDir.slice(1)} copied: ${copied} files`,
+    );
+  }
+  console.log(`Spec total copied: ${specTotal} files`);
+
+  const total =
+    postsCopied + demosCopied + docsCopied + momentsCopied + specTotal;
+  console.log(`Total assets copied: ${total} files\n`);
 }
 
 // Check if running as dev or production

@@ -1,35 +1,15 @@
-// Project: FunRadiusP
-// Author: Pfolg <https://github.com/csy214-beep>
-// Environment: TRAE
-// LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
-// Repo: <https://github.com/PfolgCodeDump/FunRadiusP>
-
 import type { Metadata } from "next";
 import { markdownToHtml, getSpecPageContent } from "../../lib/markdown";
+import PageTitle from "../../components/ui/PageTitle";
+import { generatePageMetadata } from "../../lib/i18n/metadata";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://yourdomain.com";
-const siteName = process.env.NEXT_PUBLIC_SITE_NAME || "FunRadiusP";
-const siteDescription =
-  process.env.NEXT_PUBLIC_SITE_DESCRIPTION || "个人博客，记录学习、生活和思考";
-
-export const metadata: Metadata = {
-  title: "信息",
-  description: "博客信息",
-  openGraph: {
-    type: "website",
-    title: `信息 | ${siteName}`,
-    description: siteDescription,
-    url: `${siteUrl}/information`,
-    siteName: siteName,
-    images: [{ url: `${siteUrl}/favicon.png`, alt: siteName }],
-  },
-  twitter: {
-    card: "summary",
-    title: `信息 | ${siteName}`,
-    description: siteDescription,
-    images: [`${siteUrl}/favicon.png`],
-  },
-};
+export function generateMetadata(): Metadata {
+  return generatePageMetadata({
+    path: "/information",
+    titleKey: "informationPage.pageTitle",
+    descriptionKey: "informationPage.description",
+  });
+}
 
 export default async function InformationPage() {
   const content = await getSpecPageContent("information");
@@ -37,7 +17,7 @@ export default async function InformationPage() {
 
   return (
     <div className="max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-8 text-primary">信息</h1>
+      <PageTitle translationKey="informationPage.title" />
       <div className="card mb-8 p-6">
         <div
           className="prose max-w-none"

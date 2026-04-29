@@ -1,29 +1,32 @@
-// Project: FunRadiusP
-// Author: Pfolg <https://github.com/csy214-beep>
-// Environment: TRAE
-// LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
-// Repo: <https://github.com/PfolgCodeDump/FunRadiusP>
-
 "use client";
 
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
-import VisitorGreeting from "../components/VisitorGreeting";
-import StructuredData from "../components/StructuredData";
+import VisitorGreeting from "../components/widgets/VisitorGreeting";
+import StructuredData from "../components/ui/StructuredData";
+import { useLanguage } from "@/lib/i18n";
 
 export default function Home() {
-  // 动态问候语
+  const { t, language } = useLanguage();
+
+  // 动态问候语 - 使用翻译函数
   const getGreeting = () => {
     const hour = new Date().getHours();
-    if (hour < 6) return "夜深了，注意休息";
-    if (hour < 12) return "早上好，新的一天开始了";
-    if (hour < 18) return "下午好，继续加油";
-    return "晚上好，放松一下吧";
+    if (hour < 6) return t("home.greetingNight");
+    if (hour < 12) return t("home.greetingMorning");
+    if (hour < 18) return t("home.greetingAfternoon");
+    return t("home.greetingEvening");
   };
 
   const [greeting, setGreeting] = useState(getGreeting());
   const [animatedChars, setAnimatedChars] = useState<Set<number>>(new Set());
   const animationRef = useRef<number | null>(null);
+
+  // 语言切换时更新问候语
+  useEffect(() => {
+    setGreeting(getGreeting());
+    setAnimatedChars(new Set());
+  }, [language, t]);
 
   // 每小时更新一次问候语
   useEffect(() => {
@@ -33,7 +36,7 @@ export default function Home() {
     }, 3600000); // 1小时
 
     return () => clearInterval(interval);
-  }, []);
+  }, [t]);
 
   // 字符动画效果 - 重构版本
   useEffect(() => {
@@ -97,7 +100,7 @@ export default function Home() {
         </h1>
         <VisitorGreeting />
         <p className="text-lg text-center mb-12 max-w-2xl">
-          欢迎来到我的个人博客，这里记录了我的学习、生活和思考。
+          {t("home.welcome")}
         </p>
       </div>
     </>

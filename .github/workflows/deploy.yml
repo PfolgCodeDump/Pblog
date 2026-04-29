@@ -1,18 +1,16 @@
-# Project: FunRadiusP
-# Author: Pfolg <https://github.com/csy214-beep>
-# Environment: TRAE
-# LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
-
 name: Deploy to GitHub Pages
+
 on:
   # push:
   #   branches: [main]
-  workflow_dispatch: # 手动触发
+  workflow_dispatch:  # 手动触发
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - uses: actions/checkout@v4
 
@@ -30,11 +28,52 @@ jobs:
       - name: Clean output directory
         run: rm -rf output
 
-      - run: npm run build
+      - name: Build with Next.js
+        run: npm run build
         env:
-          NEXT_PUBLIC_SITE_URL: https://${{ github.repository_owner }}.github.io
+          # 网站基础配置
+          NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
+          NEXT_PUBLIC_SITE_NAME: ${{ vars.NEXT_PUBLIC_SITE_NAME }}
+          NEXT_PUBLIC_SITE_DESCRIPTION: ${{ vars.NEXT_PUBLIC_SITE_DESCRIPTION }}
+          NEXT_PUBLIC_AUTHOR_NAME: ${{ vars.NEXT_PUBLIC_AUTHOR_NAME }}
 
-      - uses: peaceiris/actions-gh-pages@v3
+          # GitHub 卡片配置
+          NEXT_PUBLIC_GITHUB_USERNAME: ${{ vars.NEXT_PUBLIC_GITHUB_USERNAME }}
+
+          # 国际化配置
+          NEXT_PUBLIC_DEFAULT_LANGUAGE: ${{ vars.NEXT_PUBLIC_DEFAULT_LANGUAGE }}
+
+          # Giscus 评论系统配置
+          NEXT_PUBLIC_GISCUS_REPO: ${{ vars.NEXT_PUBLIC_GISCUS_REPO }}
+          NEXT_PUBLIC_GISCUS_REPO_ID: ${{ vars.NEXT_PUBLIC_GISCUS_REPO_ID }}
+          NEXT_PUBLIC_GISCUS_CATEGORY: ${{ vars.NEXT_PUBLIC_GISCUS_CATEGORY }}
+          NEXT_PUBLIC_GISCUS_CATEGORY_ID: ${{ vars.NEXT_PUBLIC_GISCUS_CATEGORY_ID }}
+
+          # Live2D 看板娘配置
+          NEXT_PUBLIC_LIVE2D_MODELS: ${{ vars.NEXT_PUBLIC_LIVE2D_MODELS }}
+          NEXT_PUBLIC_LIVE2D_DOCKED_POSITION: ${{ vars.NEXT_PUBLIC_LIVE2D_DOCKED_POSITION }}
+          NEXT_PUBLIC_LIVE2D_POSITION: ${{ vars.NEXT_PUBLIC_LIVE2D_POSITION }}
+          NEXT_PUBLIC_LIVE2D_SCALE: ${{ vars.NEXT_PUBLIC_LIVE2D_SCALE }}
+          NEXT_PUBLIC_LIVE2D_STAGE_HEIGHT: ${{ vars.NEXT_PUBLIC_LIVE2D_STAGE_HEIGHT }}
+
+          # 粒子特效配置
+          NEXT_PUBLIC_PARTICLES_ENABLED: ${{ vars.NEXT_PUBLIC_PARTICLES_ENABLED }}
+          NEXT_PUBLIC_PARTICLES_TYPE: ${{ vars.NEXT_PUBLIC_PARTICLES_TYPE }}
+          NEXT_PUBLIC_PARTICLES_COUNT: ${{ vars.NEXT_PUBLIC_PARTICLES_COUNT }}
+          NEXT_PUBLIC_PARTICLES_ZINDEX: ${{ vars.NEXT_PUBLIC_PARTICLES_ZINDEX }}
+
+          # 主题颜色配置
+          NEXT_PUBLIC_DEFAULT_PRIMARY_COLOR: ${{ vars.NEXT_PUBLIC_DEFAULT_PRIMARY_COLOR }}
+
+          # 导航栏配置
+          NEXT_PUBLIC_HEADER_AUTO_HIDE_ENABLED: ${{ vars.NEXT_PUBLIC_HEADER_AUTO_HIDE_ENABLED }}
+
+          # 友链配置
+          NEXT_PUBLIC_FRIENDS_JSON_URL: ${{ vars.NEXT_PUBLIC_FRIENDS_JSON_URL }}
+          NEXT_PUBLIC_FRIENDS_ITEMS_PER_PAGE: ${{ vars.NEXT_PUBLIC_FRIENDS_ITEMS_PER_PAGE }}
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./output

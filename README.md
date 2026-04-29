@@ -19,11 +19,12 @@
 - [x] 响应式设计，支持移动端
 - [x] Markdown 渲染，支持代码高亮和数学公式
 - [x] 文章分页、归档、分类、标签系统
+- [x] 随笔（Moments）系统，支持图文并茂的简短内容
+- [x] 文档集系统，支持结构化文档展示和阅读
 - [x] 评论系统集成（Giscus）
 - [x] 主题切换支持（亮色/暗色）
+- [x] RGB自定义主题颜色，支持通过R、G、B滚动条精确调整
 - [x] Live2D 看板娘集成
-- [x] 自动图片复制和优化
-- [x] 目录导航（TOC）
 - [x] 回到顶部功能
 - [x] 四季飘落特效（使用 natural-falling-effect 库，支持花瓣、落叶、下雨、下雪，可自动根据季节切换）
 - [x] 环境变量配置支持
@@ -33,8 +34,10 @@
 - [x] 多层级背景系统（渐变背景 → 粒子特效 → 背景图片 → 页面内容）
 - [x] 完整SEO优化（Open Graph、Twitter Card、JSON-LD结构化数据）
 - [x] RSS feed 支持，可导出给AI分析或RSS阅读器订阅
-- [x] RGB自定义主题颜色，支持通过R、G、B滚动条精确调整
 - [x] 文章音乐播放器，支持网易云音乐和本地歌曲
+- [x] 国际化（i18n）支持，支持 6 种语言（中文、英文、西班牙语、日语、德语、法语）
+- [x] 图片查看器，支持点击图片全屏查看
+- [x] 访客问候，根据时间和节日显示不同的问候语
 
 ## 技术栈
 
@@ -83,60 +86,12 @@ npm start
 - GitHub Pages
 - Vercel
 - Netlify
-- Cloudflare Pages （主要支持）
+- Cloudflare Pages (推荐)
 
 > [!WARNING]
 > 其他静态托管服务可能会有不兼容的bug，如路由问题等
 
 ## 目录结构
-
-```
-FunRadiusP/
-├── app/                      # App Router 页面
-│   ├── layout.tsx            # 根布局
-│   ├── page.tsx              # 首页
-│   ├── globals.css           # 全局样式
-│   ├── articles/             # 文章列表 + 分页
-│   ├── posts/[slug]/         # 文章详情
-│   ├── archive/              # 归档（年份索引 + 列表）
-│   ├── categories/           # 分类列表 + 单个分类页面
-│   ├── tags/                 # 标签云 + 单个标签页面
-│   ├── about/                # 关于页
-│   ├── journey/              # 历程页（时间线）
-│   ├── projects/             # 项目页
-│   ├── demos/                # Demo 列表页
-│   ├── demos/[slug]/         # Demo 详情页
-│   └── information/          # 信息页（含技术栈信息）
-├── components/               # 可复用组件
-│   ├── Header.tsx            # 导航栏
-│   ├── Footer.tsx            # 页脚
-│   ├── BackToTop.tsx         # 回到顶部
-│   ├── Pagination.tsx        # 分页组件
-│   ├── TableOfContents.tsx   # 目录导航
-│   ├── ThemeToggle.tsx       # 主题切换
-│   ├── Live2DWidget.tsx      # Live2D 看板娘
-│   ├── SafeImage.tsx         # 安全图片组件
-│   ├── ExpandableCover.tsx   # 可展开封面图片
-│   ├── AnchorHandler.tsx     # 全局锚点跳转处理
-│   ├── GiscusComments.tsx    # 评论系统
-│   └── MusicPlayer.tsx       # 音乐播放器
-├── lib/                      # 工具函数
-│   ├── posts.ts              # 扫描、解析所有文章
-│   ├── demos.ts              # 扫描、解析所有 demo
-│   ├── utils.ts              # 工具函数
-│   └── markdown.ts           # Markdown 处理
-├── content/                  # 内容目录
-│   ├── posts/                # 每篇文章一个文件夹（含 index.md 和 assets）
-│   ├── demos/                # 每个 demo 一个文件夹（含 index.html/show.html 和 assets）
-│   └── spec/                 # 特殊页面（about, journey, projects, information）
-├── types/                    # TypeScript 类型定义
-│   └── live2d.d.ts           # Live2D 类型定义
-├── scripts/                  # 构建脚本
-│   ├── copy-post-images.js           # 生产环境复制图片
-│   ├── copy-post-images-dev.js       # 开发环境复制图片
-│   └── serve-static.js               # 静态预览服务器
-└── public/                   # 静态资源
-```
 
 ## 文章格式
 
@@ -155,22 +110,9 @@ tags: [标签1, 标签2]
 draft: false
 ---
 
-# 文章内容
-
-这里是你的 Markdown 内容...
 ```
 
-## 支持数学公式
-
-$$ E = mc^2 $$
-
-## 支持代码高亮
-
-```javascript
-console.log("Hello, World!");
-```
-
-## 支持音乐播放器（可选）
+支持音乐播放器（可选）：
 
 ```yaml
 ---
@@ -181,22 +123,13 @@ category: 分类名称
 tags: [标签1, 标签2]
 draft: false
 player:
-  source: "netease" # "netease" 或 "local"
+  source: "netease"  # "netease" 或 "local"
   link: "2085549628" # 网易云歌曲ID、完整URL或本地文件路径
-  bottom: "40px" # 位置配置（可选，默认 bottom: 40px, left: 40px）
+  bottom: "40px"     # 位置配置（可选，默认 bottom: 40px, left: 40px）
   left: "40px"
-  autoPlay: false # 是否自动播放（可选，默认自动播放）
+  autoPlay: false    # 是否自动播放（可选，默认自动播放）
 ---
 ```
-
-音乐播放器配置说明：
-
-- `source`: 音源类型，`netease`（网易云音乐）或 `local`（本地歌曲）
-- `link`:
-  - 网易云：歌曲 ID（纯数字）或完整播放器 URL
-  - 本地：相对路径（自动处理 assets 目录）
-- `top`/`bottom`/`left`/`right`: 位置配置（可选），默认 `bottom: 40px, left: 40px`
-- `autoPlay`: 是否自动播放（可选），默认自动播放，设置为 `false` 时不自动播放
 
 ## Demo 格式
 
@@ -206,10 +139,9 @@ player:
 
 content/demos/
 └── demo-name/
-    ├── meta.json # 元数据配置
-    ├── demo.html # 主页面
-    ├── show.html # 展示页面（可选，优先使用）
-    └── assets/ # 资源文件夹（可选）
+    ├── meta.json       # 元数据配置
+    ├── demo.html       # 主页面（必需，或为： index.html）
+    └── assets/         # 资源文件夹（可选）
         ├── style.css
         ├── script.js
         └── images/
@@ -229,87 +161,134 @@ content/demos/
 }
 ```
 
-- `published`: 设置为 `false` 时该 demo 不会在列表中显示
+- `published`: 设置为 `false` 时该 demo 不会在列表中显示，但在路径中可访问。
 
-### 关于文件命名
+## 随笔格式（Moments）
 
-- 使用 `demo.html` 而不是 `index.html`，避免构建后路由冲突
-- 系统也兼容 `index.html`，构建时会自动重命名为 `demo.html`
-- `show.html` 优先用于页面展示
+在 `content/moments/` 目录下创建随笔文件夹，每个文件夹包含 `index.md` 文件：
+
+```markdown
+---
+
+time: 2026-04-25 14:30:00 # 随笔时间
+photos: # 图片
+  - assets/1775234602116.gif
+  - assets/crashed.jpeg
+
+  - assets\1bca23f27a3f2e1e1509d5d3e14dc3e31f632a94ef36306feeea2976c6fbfa94.png
+  - assets\2ad0593bb7fc4b5feb4e01d139f9daa094519ebb1e42ea442887093a41394af1.png
+  - assets\14deca23740725f455d184682fe77c1bcf7b527796140c1605f1897b7606b818.png
+  - assets\411bf11ff0dfbd12dff6cd4ef699b4f6ca53a60d29ac295f8f40f867b9b089f2.png
+  - assets\679fffe1d819c53abaed55ac3090ed51e6e8605e9375b3668a62c54c4bbc3b44-small.png
+  - assets\679fffe1d819c53abaed55ac3090ed51e6e8605e9375b3668a62c54c4bbc3b44.png
+
+draft: true # 为true时该随笔不会在列表中显示
+---
+
+```
+
+## 文档集格式（Docs）
+
+在 `content/docs/` 目录下创建文档集文件夹，每个文件夹包含以下文件：
+
+```
+content/docs/
+└── collection-name/
+    ├── meta.json       # 元数据配置
+    ├── summary.md      # 文档集介绍（可选）
+    ├── p1.md           # 第一篇文档
+    ├── p2.md           # 第二篇文档
+    └── ...
+```
+
+### meta.json 配置
+
+```json
+{
+  "title": "Python 学习笔记",
+  "description": "Python 编程语言学习笔记和教程",
+  "icon": "🐍",
+  "order": 2,
+  "published": false
+}
+```
+
+```文档
+---
+title: Python 基础语法
+description: Python 基础语法和数据类型
+order: 2
+draft: false
+---
+```
 
 ## 配置
 
-复制 `.env.example` 为 `.env`或`.env.local` 并进行配置。
-
-### 网站基础配置
+复制 `.env.example` 为 `.env.local` 并进行配置。
 
 ```env
+# 网站基础配置
 NEXT_PUBLIC_SITE_URL=https://yourdomain.com
 NEXT_PUBLIC_SITE_NAME=FunRadiusP
 NEXT_PUBLIC_SITE_DESCRIPTION=个人博客，记录学习、生活和思考
 NEXT_PUBLIC_AUTHOR_NAME=Your Name
-```
 
-### Giscus 评论系统
+# GitHub 卡片配置
+# GitHub 用户名，用于在关于页面显示 GitHub 卡片
+NEXT_PUBLIC_GITHUB_USERNAME=yourusername
 
-访问 [https://giscus.app/](https://giscus.app/) 获取配置信息，然后在 `.env` 中填写。
+# 国际化（多语言）配置
+# 默认语言： `zh` - 中文；`en` - 英文；`es` - 西班牙语；`ja` - 日语；`de` - 德语；`fr` - 法语
+NEXT_PUBLIC_DEFAULT_LANGUAGE=en
 
-```env
-NEXT_PUBLIC_GISCUS_REPO=yourusername/yourrepo
-NEXT_PUBLIC_GISCUS_REPO_ID=your-repo-id
-NEXT_PUBLIC_GISCUS_CATEGORY=Announcements
-NEXT_PUBLIC_GISCUS_CATEGORY_ID=your-category-id
-```
+# Giscus 评论系统配置
+# 获取配置信息请访问：https://giscus.app/
+NEXT_PUBLIC_GISCUS_REPO=
+NEXT_PUBLIC_GISCUS_REPO_ID=
+NEXT_PUBLIC_GISCUS_CATEGORY=
+NEXT_PUBLIC_GISCUS_CATEGORY_ID=
 
-### Live2D 看板娘
-
-在 `.env` 中配置 Live2D 模型路径和显示位置。使用 JSON 数组格式配置多个模型：
-
-```env
-NEXT_PUBLIC_LIVE2D_MODELS=["/live2d/chuixue_3/chuixue_3.model3.json","/live2d/dujiaoshou_4/dujiaoshou_4.model3.json","/live2d/ice-girl/ice-girl-model/IceGirl.model3.json"]
+# Live2D 看板娘配置
+# 模型路径：可以使用本地路径或远程URL，JSON数组格式
+NEXT_PUBLIC_LIVE2D_MODELS=[]
+# 模型停靠位置：left 或 right
 NEXT_PUBLIC_LIVE2D_DOCKED_POSITION=right
+# 模型位置：[x, y]
 NEXT_PUBLIC_LIVE2D_POSITION=[0, 60]
+# 模型缩放：默认0.08
 NEXT_PUBLIC_LIVE2D_SCALE=0.08
+# 舞台高度：默认450
 NEXT_PUBLIC_LIVE2D_STAGE_HEIGHT=450
-```
 
-推荐模型源：
-
-- <https://model.hacxy.cn/> - 提供多种 Live2D 模型
-
-### 粒子特效配置
-
-```env
+# 粒子特效配置
+# 是否启用粒子特效：true 或 false
 NEXT_PUBLIC_PARTICLES_ENABLED=true
+# 特效类型：petal（花瓣）、leaf（落叶）、rain（下雨）、snow（下雪）、auto（自动根据季节选择）
 NEXT_PUBLIC_PARTICLES_TYPE=petal
+# 粒子数量：默认50
 NEXT_PUBLIC_PARTICLES_COUNT=50
+# 特效z-index层级：0（在背景图片下面）
+# 层级关系：渐变背景(底层) -> 粒子特效(0) -> 背景图片(1) -> 页面内容(10+)
 NEXT_PUBLIC_PARTICLES_ZINDEX=0
-```
 
-- `NEXT_PUBLIC_PARTICLES_ENABLED`: 是否启用粒子特效：true 或 false
-- `NEXT_PUBLIC_PARTICLES_TYPE`: 特效类型：petal（花瓣）、leaf（落叶）、rain（下雨）、snow（下雪）、auto（自动根据季节选择）
-- `NEXT_PUBLIC_PARTICLES_COUNT`: 粒子数量：默认 50
-- `NEXT_PUBLIC_PARTICLES_ZINDEX`: 特效 z-index 层级：0（在背景图片下面），层级关系：渐变背景(底层) → 粒子特效(0) → 背景图片(1) → 页面内容(10+)
-
-### 主题颜色配置
-
-```env
+# 主题颜色配置
+# 默认主色调（十六进制颜色值）
 NEXT_PUBLIC_DEFAULT_PRIMARY_COLOR=#ff69b4
-```
 
-- `NEXT_PUBLIC_DEFAULT_PRIMARY_COLOR`: 默认主色调（十六进制颜色值）
-
-### 导航栏配置
-
-```env
+# 导航栏配置
+# 是否启用导航栏自动隐藏：true 或 false（默认 true）
 NEXT_PUBLIC_HEADER_AUTO_HIDE_ENABLED=true
-```
 
-- `NEXT_PUBLIC_HEADER_AUTO_HIDE_ENABLED`: 是否启用导航栏自动隐藏：true 或 false（默认 true），设置为 `true` 时导航栏会根据鼠标位置自动隐藏，设置为 `false` 时导航栏始终显示
+# 友链配置
+# 友链 JSON 文件的 URL，用于加载友链数据
+NEXT_PUBLIC_FRIENDS_JSON_URL=https://raw.githubusercontent.com/<yourusername>/<yourrepositoryname>/main/friends.json
+# 每页显示的友链数量
+NEXT_PUBLIC_FRIENDS_ITEMS_PER_PAGE=24
+```
 
 ## 常见问题
 
-- 如果进入开发服务器，发现页面404，请酌情修改`next.config.js`中的`basePath`和`assetPrefix`。
+- 如果进入开发服务器，发现页面404，请酌情修改next.config.js中的basePath和assetPrefix。
 - 没有找到 Live2D 模型，请检查模型路径是否正确。
 - 一切页面和代码你都可以更改，请记住，别人能写的东西你未必不能写。
 

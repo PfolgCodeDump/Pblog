@@ -1,42 +1,22 @@
-// Project: FunRadiusP
-// Author: Pfolg <https://github.com/csy214-beep>
-// Environment: TRAE
-// LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
-// Repo: <https://github.com/PfolgCodeDump/FunRadiusP>
-
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getPosts } from "../../lib/posts";
 import { paginate, formatDate } from "../../lib/utils";
-import Pagination from "../../components/Pagination";
-import SafeImage from "../../components/SafeImage";
-import StructuredData from "../../components/StructuredData";
+import Pagination from "../../components/ui/Pagination";
+import SafeImage from "../../components/ui/SafeImage";
+import StructuredData from "../../components/ui/StructuredData";
+import PageTitle from "../../components/ui/PageTitle";
+import { generatePageMetadata } from "../../lib/i18n/metadata";
 
 const PAGE_SIZE = 5;
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://yourdomain.com";
-const siteName = process.env.NEXT_PUBLIC_SITE_NAME || "FunRadiusP";
-const siteDescription =
-  process.env.NEXT_PUBLIC_SITE_DESCRIPTION || "个人博客，记录学习、生活和思考";
-
-export const metadata: Metadata = {
-  title: "文章",
-  description: "所有文章列表",
-  openGraph: {
-    type: "website",
-    title: `文章 | ${siteName}`,
-    description: siteDescription,
-    url: `${siteUrl}/articles`,
-    siteName: siteName,
-    images: [{ url: `${siteUrl}/favicon.png`, alt: siteName }],
-  },
-  twitter: {
-    card: "summary",
-    title: `文章 | ${siteName}`,
-    description: siteDescription,
-    images: [`${siteUrl}/favicon.png`],
-  },
-};
+export function generateMetadata(): Metadata {
+  return generatePageMetadata({
+    path: "/articles",
+    titleKey: "articlesPage.title",
+    descriptionKey: "articlesPage.description",
+  });
+}
 
 export default async function ArticlesPage() {
   const currentPage = 1;
@@ -51,12 +31,7 @@ export default async function ArticlesPage() {
     <>
       <StructuredData type="blog" />
       <div className="max-w-4xl mx-auto">
-        <h1
-          className="text-3xl font-bold mb-8"
-          style={{ color: "var(--primary)" }}
-        >
-          文章列表
-        </h1>
+        <PageTitle translationKey="articlesPage.title" />
 
         <div className="space-y-6">
           {paginatedPosts.map((post) => {

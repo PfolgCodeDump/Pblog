@@ -149,9 +149,29 @@
 - **@types/react-dom**: React DOM 类型定义
 - **许可证**: MIT
 
+## 其他依赖
+
+### Dotenv
+
+- **主页**: <https://github.com/motdotla/dotenv#readme>
+- **许可证**: BSD-2-Clause
+- **用途**: 环境变量加载工具
+
+### React Icons
+
+- **主页**: <https://github.com/react-icons/react-icons#readme>
+- **许可证**: MIT
+- **用途**: 流行图标库的 React 组件
+
+### RSS
+
+- **主页**: <https://github.com/dylang/node-rss>
+- **许可证**: MIT
+- **用途**: RSS 生成库
+
 ## 外部服务与库
 
-### OhMyLive2D
+### Oh-MyLive-2D
 
 - **主页**: <https://github.com/oh-my-live2d/oh-my-live2d>
 - **用途**: Live2D 看板娘框架

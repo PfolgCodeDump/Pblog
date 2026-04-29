@@ -81,6 +81,12 @@ output
 /public/posts
 /public/demos
 /public/docs
+/public/about
+/public/information
+/public/journey
+/public/projects
+/public/moments
+
 
 # Nuxt.js build / generate output
 .nuxt
@@ -125,5 +131,3 @@ dist
 .pnp.*
 public/rss.xml
 
-content/docs/Python
-content/docs/Cpp

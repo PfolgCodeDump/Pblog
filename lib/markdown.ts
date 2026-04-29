@@ -1,9 +1,3 @@
-// Project: FunRadiusP
-// Author: Pfolg <https://github.com/csy214-beep>
-// Environment: TRAE
-// LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
-// Repo: <https://github.com/PfolgCodeDump/FunRadiusP>
-
 import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
@@ -203,7 +197,11 @@ function processTimelineSyntax(markdown: string): string {
 // Markdown 转 HTML
 export async function markdownToHtml(
   markdown: string,
-  context?: { type: "post" | "doc"; id: string; collection?: string },
+  context?: {
+    type: "post" | "doc" | "moment";
+    id: string;
+    collection?: string;
+  },
   addHeadingIds: boolean = true,
 ): Promise<string> {
   // 处理时间线语法
@@ -223,6 +221,13 @@ export async function markdownToHtml(
         /!\[([^\]]*)\]\((?!http|https|\/)([^)]+)\)/g,
         (match, alt, src) => {
           return `![${alt}](/docs/${context.collection}/${src})`;
+        },
+      );
+    } else if (context.type === "moment") {
+      processedMarkdown = processedMarkdown.replace(
+        /!\[([^\]]*)\]\((?!http|https|\/)([^)]+)\)/g,
+        (match, alt, src) => {
+          return `![${alt}](/moments/${context.id}/${src})`;
         },
       );
     }
@@ -257,20 +262,14 @@ export async function markdownToHtml(
 
 // 读取特殊页面的 Markdown 文件
 export async function getSpecPageContent(page: string): Promise<string> {
-  const filePath = path.join(
-    process.cwd(),
-    "content",
-    "spec",
-    page,
-    "index.md",
-  );
+  const filePath = path.join(process.cwd(), 'content', 'spec', page, 'index.md');
   try {
     if (fs.existsSync(filePath)) {
-      return fs.readFileSync(filePath, "utf8");
+      return fs.readFileSync(filePath, 'utf8');
     }
-    return "";
+    return '';
   } catch (error) {
     console.error(`Error reading spec page ${page}:`, error);
-    return "";
+    return '';
   }
 }

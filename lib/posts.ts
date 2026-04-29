@@ -1,9 +1,3 @@
-// Project: FunRadiusP
-// Author: Pfolg <https://github.com/csy214-beep>
-// Environment: TRAE
-// LICENCE: <https://creativecommons.org/licenses/by-nc-sa/4.0>
-// Repo: <https://github.com/PfolgCodeDump/FunRadiusP>
-
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -24,10 +18,7 @@ export interface Post {
 }
 
 // 处理图片路径，将相对路径转换为绝对路径
-function processImagePath(
-  image: string | undefined,
-  postId: string,
-): string | undefined {
+function processImagePath(image: string | undefined, postId: string): string | undefined {
   if (!image) return undefined;
 
   try {
@@ -97,15 +88,15 @@ export function getPosts(): Post[] {
 
         return {
           id: filename,
-          title: data.title || "",
+          title: data.title || '',
           published: data.published || new Date().toISOString(),
-          description: data.description || "",
-          category: data.category || "",
+          description: data.description || '',
+          category: data.category || '',
           tags: data.tags || [],
           draft: data.draft || false,
           image: processImagePath(data.image, filename),
           player: data.player,
-          content: content || "",
+          content: content || '',
         };
       } catch (error) {
         console.error(`Error processing post ${filename}:`, error);
@@ -131,15 +122,15 @@ export function getPostById(id: string): Post | null {
 
     return {
       id,
-      title: data.title || "",
+      title: data.title || '',
       published: data.published || new Date().toISOString(),
-      description: data.description || "",
-      category: data.category || "",
+      description: data.description || '',
+      category: data.category || '',
       tags: data.tags || [],
       draft: data.draft || false,
       image: processImagePath(data.image, id),
       player: data.player,
-      content: content || "",
+      content: content || '',
     };
   } catch (error) {
     console.error(`Error processing post ${id}:`, error);
@@ -178,9 +169,7 @@ export function getPostsGroupedByYear(): Record<string, Post[]> {
 
   posts.forEach((post) => {
     try {
-      const year = new Date(post.published || new Date())
-        .getFullYear()
-        .toString();
+      const year = new Date(post.published || new Date()).getFullYear().toString();
       if (!grouped[year]) {
         grouped[year] = [];
       }
