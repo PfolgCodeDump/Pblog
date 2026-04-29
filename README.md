@@ -93,7 +93,7 @@ npm start
 
 ## 目录结构
 
-![structure.html](public/structure.html)
+[structure.html](public/structure.html)
 
 <https://pfolgcodedump.github.io/FunRadiusP/structure>
 
