@@ -1,2 +1,4 @@
 # 忽略整个 content 目录及其所有子目录和文件
 content/** linguist-vendored=true
+
+public/**
